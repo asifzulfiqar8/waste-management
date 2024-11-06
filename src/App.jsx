@@ -1,5 +1,6 @@
 import { lazy, Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Loader from "./components/shared/small/Loader.jsx";
 
 // manager routes
 const Manager = lazy(() => import("./pages/manager/index.jsx"));
@@ -15,7 +16,7 @@ const Settings = lazy(() => import("./pages/manager/settings/Settings.jsx"));
 function App() {
   return (
     <Router>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<Loader />}>
         <Routes>
           <Route path="/" element={<Manager />}>
             <Route index element={<ManagerDashboard />} />

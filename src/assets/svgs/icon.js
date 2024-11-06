@@ -8,6 +8,7 @@ import SettingIcon from "./aside/SettingIcon";
 import LgBinIcon from "./dashboard/BinIcon";
 import LgTruckIcon from "./dashboard/FillTruckIcon";
 import LgDriverIcon from "./dashboard/DriverIcon";
+import RingIcon from './default/RingIcon';
 
 export {
   DashboardIcon,
@@ -20,4 +21,5 @@ export {
   LgBinIcon,
   LgTruckIcon,
   LgDriverIcon,
+  RingIcon
 };
