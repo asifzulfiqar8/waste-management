@@ -12,8 +12,7 @@ body {
 
 .user-dashboard::before {
   content: "";
-  background: url("src/assets/images/user-dashboard.png") no-repeat
-    center/cover;
+  background: url("src/assets/images/user-dashboard.png") no-repeat center/cover;
   height: 200px;
   width: 100%;
   position: absolute;
@@ -23,13 +22,25 @@ body {
 }
 
 .custom-scroll::-webkit-scrollbar {
-    width: 4px;
-  }
-  .custom-scroll::-webkit-scrollbar-thumb {
-    background: #01B67A;
-    border-radius: 12px;
-  }
-  .custom-scroll::-webkit-scrollbar-track {
-    background: #a4ffe1;
-    border-radius: 12px;
-  }
+  width: 4px;
+}
+.custom-scroll::-webkit-scrollbar-thumb {
+  background: #01b67a;
+  border-radius: 12px;
+}
+.custom-scroll::-webkit-scrollbar-track {
+  background: #a4ffe1;
+  border-radius: 12px;
+}
+
+.leaflet-popup-close-button {
+  display: none !important;
+}
+.leaflet-popup-content-wrapper {
+  padding: 0px !important;
+  border-radius: 10px !important;
+}
+.leaflet-popup-content {
+  margin: 0 !important;
+  width: 500px !important;
+}

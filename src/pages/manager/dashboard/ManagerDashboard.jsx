@@ -9,6 +9,8 @@ import truck from "../../../assets/images/dashboard/truck-card.png";
 import driver from "../../../assets/images/dashboard/driver-card.png";
 import WasteDetailTable from "./components/WasteDetailTable";
 import Alerts from "./components/Alerts";
+import Map from "./components/Map";
+import WasteView from "./components/WasteView";
 
 const ManagerDashboard = () => {
   return (
@@ -23,12 +25,16 @@ const ManagerDashboard = () => {
       <div className="border-[1px] col-span-6 xl:col-span-2">
         line charts cards
       </div>
-      <div className="border-[1px] col-span-6 xl:col-span-4">map</div>
+      <div className="rounded-lg col-span-6 xl:col-span-4">
+        <Map />
+      </div>
       <div className="col-span-6 xl:col-span-2">
         <Alerts />
       </div>
       <div className="border-[1px] col-span-6 xl:col-span-4">area</div>
-      <div className="border-[1px] col-span-6 xl:col-span-2">pie</div>
+      <div className="border-[1px] col-span-6 xl:col-span-2">
+        <WasteView />
+      </div>
       <div className="col-span-6">
         <WasteDetailTable />
       </div>
