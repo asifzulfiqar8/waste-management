@@ -36,58 +36,19 @@ const WasteView = () => {
   ]; // Fill the rest with white
 
   return (
-    <div
-      className="bg-white rounded-lg border-[1px] shadow-lg w-full"
-      style={{ position: "relative", height: "300px" }}
-    >
-      {/* Outer Radial Chart (Recycled and Remaining data) */}
-      <ResponsiveContainer width="100%" height="100%">
-        <PieChart>
-          <Pie
-            data={[...outerData, ...remainingData]} // Adding "Recycled" and "Remaining" data
-            dataKey="value"
-            cx="50%"
-            cy="50%"
-            outerRadius={100} // Outer radius for radial effect
-            innerRadius={80} // Inner radius to control thickness
-            startAngle={90}
-            endAngle={450}
-            paddingAngle={5}
-            label={({ value }) => (
-              <span style={{ fill: "#ffffff", fontSize: "14px" }}>{value}</span>
-            )}
-            labelLine={false} // Disable connecting lines
-          >
-            {outerData.map((entry, index) => (
-              <Cell key={`outer-cell-${index}`} fill={entry.color} />
-            ))}
-            {remainingData.map((entry, index) => (
-              <Cell key={`remaining-cell-${index}`} fill={entry.color} />
-            ))}
-          </Pie>
-          <Tooltip />
-        </PieChart>
-      </ResponsiveContainer>
-
-      {/* Inner Full Pie Chart (Equal Distribution for Paper, Plastic, and Metal) */}
-      <div
-        style={{
-          position: "absolute",
-          top: "25%",
-          left: "25%",
-          width: "50%",
-          height: "50%",
-        }}
-      >
+    <div className="bg-white rounded-lg border-[1px] shadow-lg w-full p-3">
+      <h3 className="text-sm md:text-base font-[600]">Waste View</h3>
+      <div style={{ position: "relative", height: "300px" }}>
+        {/* Outer Radial Chart (Recycled and Remaining data) */}
         <ResponsiveContainer width="100%" height="100%">
           <PieChart>
             <Pie
-              data={innerData}
+              data={[...outerData, ...remainingData]} // Adding "Recycled" and "Remaining" data
               dataKey="value"
               cx="50%"
               cy="50%"
-              outerRadius={70} // Smaller to fit within outer ring
-              innerRadius={0} // Full pie chart appearance
+              outerRadius={100} // Outer radius for radial effect
+              innerRadius={80} // Inner radius to control thickness
               startAngle={90}
               endAngle={450}
               paddingAngle={5}
@@ -98,27 +59,68 @@ const WasteView = () => {
               )}
               labelLine={false} // Disable connecting lines
             >
-              {innerData.map((entry, index) => (
-                <Cell key={`inner-cell-${index}`} fill={entry.color} />
+              {outerData.map((entry, index) => (
+                <Cell key={`outer-cell-${index}`} fill={entry.color} />
+              ))}
+              {remainingData.map((entry, index) => (
+                <Cell key={`remaining-cell-${index}`} fill={entry.color} />
               ))}
             </Pie>
+            <Tooltip />
           </PieChart>
         </ResponsiveContainer>
-      </div>
 
-      {/* Legend */}
-      <Legend
-        layout="horizontal"
-        verticalAlign="bottom"
-        align="center"
-        iconType="circle"
-        payload={data.map((item) => ({
-          id: item.name,
-          type: "circle",
-          value: item.name,
-          color: item.color,
-        }))}
-      />
+        {/* Inner Full Pie Chart (Equal Distribution for Paper, Plastic, and Metal) */}
+        <div
+          style={{
+            position: "absolute",
+            top: "25%",
+            left: "25%",
+            width: "50%",
+            height: "50%",
+          }}
+        >
+          <ResponsiveContainer width="100%" height="100%">
+            <PieChart>
+              <Pie
+                data={innerData}
+                dataKey="value"
+                cx="50%"
+                cy="50%"
+                outerRadius={70} // Smaller to fit within outer ring
+                innerRadius={0} // Full pie chart appearance
+                startAngle={90}
+                endAngle={450}
+                paddingAngle={5}
+                label={({ value }) => (
+                  <span style={{ fill: "#ffffff", fontSize: "14px" }}>
+                    {value}
+                  </span>
+                )}
+                labelLine={false} // Disable connecting lines
+              >
+                {innerData.map((entry, index) => (
+                  <Cell key={`inner-cell-${index}`} fill={entry.color} />
+                ))}
+              </Pie>
+            </PieChart>
+          </ResponsiveContainer>
+        </div>
+
+        {/* Legend */}
+        <Legend
+          layout="horizontal"
+          verticalAlign="bottom"
+          align="center"
+          iconType="circle"
+          payload={data.map((item) => ({
+            id: item.name,
+            type: "circle",
+            value: item.name,
+            color: item.color,
+          }))}
+        />
+      </div>
     </div>
   );
 };
