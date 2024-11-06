@@ -12,7 +12,7 @@ body {
 
 .user-dashboard::before {
   content: "";
-  background: url("src/assets/images/user-dashboard.png") no-repeat center/cover;
+  background: url("/src/assets/images/user-dashboard.png") no-repeat center/cover;
   height: 200px;
   width: 100%;
   position: absolute;
