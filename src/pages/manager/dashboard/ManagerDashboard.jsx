@@ -32,7 +32,7 @@ const ManagerDashboard = () => {
         <Alerts />
       </div>
       <div className="border-[1px] col-span-6 xl:col-span-4">area</div>
-      <div className="border-[1px] col-span-6 xl:col-span-2">
+      <div className="col-span-6 xl:col-span-2">
         <WasteView />
       </div>
       <div className="col-span-6">
