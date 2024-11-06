@@ -1,3 +1,46 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  font-family: "Nunito", sans-serif !important;
+}
+
+.user-dashboard::before {
+  content: "";
+  background: url("src/assets/images/user-dashboard.png") no-repeat center/cover;
+  height: 200px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.custom-scroll::-webkit-scrollbar {
+  width: 4px;
+}
+.custom-scroll::-webkit-scrollbar-thumb {
+  background: #01b67a;
+  border-radius: 12px;
+}
+.custom-scroll::-webkit-scrollbar-track {
+  background: #a4ffe1;
+  border-radius: 12px;
+}
+
+.leaflet-popup-close-button {
+  display: none !important;
+}
+.leaflet-popup-content-wrapper {
+  padding: 0px !important;
+  border-radius: 10px !important;
+}
+.leaflet-popup-content {
+  margin: 0 !important;
+  width: 500px !important;
+}
