@@ -11,7 +11,7 @@ const Alerts = () => {
   return (
     <div className="bg-white rounded-lg border-[1px] shadow-lg  p-3 ">
       <h3 className="text-sm md:text-base font-[600]">Alerts</h3>
-      <div className="h-[347px] custom-scroll overflow-auto mt-1">
+      <div className="h-[408px] custom-scroll overflow-auto mt-1">
         <SingleAlert type="Tracking Failure" icon={trackingFailure} />
         <SingleAlert type="Driver Overload" icon={driverOverload} />
         <SingleAlert type="Truck Offline" icon={truckOffline} />
