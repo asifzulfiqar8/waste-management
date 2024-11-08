@@ -1,7 +1,7 @@
 const BinIcon = () => {
   return (
     <svg
-      width="22"
+      width="14"
       height="30"
       viewBox="0 0 16 23"
       fill="none"

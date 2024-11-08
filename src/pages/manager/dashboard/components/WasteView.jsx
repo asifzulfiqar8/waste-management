@@ -16,39 +16,38 @@ const data = [
 ];
 
 const WasteView = () => {
-  // Inner chart: equal distribution (33.33% each for Paper, Plastic, Metal)
   const innerData = [
     { name: "Paper", value: 33.33, color: "#04E59B80" },
     { name: "Plastic", value: 33.33, color: "#DCD521" },
     { name: "Metal", value: 33.33, color: "#23B2E7" },
   ];
 
-  // Calculate the remaining space dynamically for the outer chart
   const recycledValue = data.find((item) => item.name === "Recycled").value;
-  const remainingValue = 100 - recycledValue; // Automatically fill the rest with white
+  const remainingValue = 100 - recycledValue;
 
-  // Outer chart: 60% filled with "Recycled" data and remaining dynamically calculated
   const outerData = [
     { name: "Recycled", value: recycledValue, color: "#01B67A" },
   ];
   const remainingData = [
     { name: "Remaining", value: remainingValue, color: "#fff" },
-  ]; // Fill the rest with white
+  ];
 
   return (
     <div className="bg-white rounded-lg border-[1px] shadow-lg w-full p-3">
-      <h3 className="text-sm md:text-base font-[600]">Waste View</h3>
-      <div style={{ position: "relative", height: "300px" }}>
-        {/* Outer Radial Chart (Recycled and Remaining data) */}
+      <h3 className="text-sm md:text-base font-[600] flex justify-start">
+        Waste View
+      </h3>
+      <div style={{ position: "relative", height: "340px" }}>
+        {/* Outer Radial Chart */}
         <ResponsiveContainer width="100%" height="100%">
           <PieChart>
             <Pie
-              data={[...outerData, ...remainingData]} // Adding "Recycled" and "Remaining" data
+              data={[...outerData, ...remainingData]}
               dataKey="value"
               cx="50%"
               cy="50%"
-              outerRadius={100} // Outer radius for radial effect
-              innerRadius={80} // Inner radius to control thickness
+              outerRadius={90}
+              innerRadius={72}
               startAngle={90}
               endAngle={450}
               paddingAngle={5}
@@ -57,7 +56,7 @@ const WasteView = () => {
                   {value}
                 </span>
               )}
-              labelLine={false} // Disable connecting lines
+              labelLine={false}
             >
               {outerData.map((entry, index) => (
                 <Cell key={`outer-cell-${index}`} fill={entry.color} />
@@ -70,13 +69,13 @@ const WasteView = () => {
           </PieChart>
         </ResponsiveContainer>
 
-        {/* Inner Full Pie Chart (Equal Distribution for Paper, Plastic, and Metal) */}
+        {/* Inner Full Pie Chart */}
         <div
           style={{
             position: "absolute",
             top: "25%",
-            left: "25%",
-            width: "50%",
+            left: "20%",
+            width: "60%",
             height: "50%",
           }}
         >
@@ -87,17 +86,17 @@ const WasteView = () => {
                 dataKey="value"
                 cx="50%"
                 cy="50%"
-                outerRadius={70} // Smaller to fit within outer ring
-                innerRadius={0} // Full pie chart appearance
+                outerRadius={70}
+                innerRadius={0}
                 startAngle={90}
                 endAngle={450}
-                paddingAngle={5}
+                paddingAngle={0}
                 label={({ value }) => (
                   <span style={{ fill: "#ffffff", fontSize: "14px" }}>
                     {value}
                   </span>
                 )}
-                labelLine={false} // Disable connecting lines
+                labelLine={false}
               >
                 {innerData.map((entry, index) => (
                   <Cell key={`inner-cell-${index}`} fill={entry.color} />
@@ -107,19 +106,28 @@ const WasteView = () => {
           </ResponsiveContainer>
         </div>
 
-        {/* Legend */}
-        <Legend
-          layout="horizontal"
-          verticalAlign="bottom"
-          align="center"
-          iconType="circle"
-          payload={data.map((item) => ({
-            id: item.name,
-            type: "circle",
-            value: item.name,
-            color: item.color,
-          }))}
-        />
+        {/* Centered Legend */}
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            width: "100%",
+            marginTop: "10px",
+          }}
+        >
+          <Legend
+            layout="horizontal"
+            verticalAlign="bottom"
+            align="center"
+            iconType="circle"
+            payload={data.map((item) => ({
+              id: item.name,
+              type: "circle",
+              value: item.name,
+              color: item.color,
+            }))}
+          />
+        </div>
       </div>
     </div>
   );

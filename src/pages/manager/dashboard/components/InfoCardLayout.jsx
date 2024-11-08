@@ -13,7 +13,7 @@ const InfoCardLayout = ({ content, url }) => {
     >
       <div>
         <h3 className="text-base font-[500]">Total Bins</h3>
-        <h3 className="text-xl font-bold">233</h3>
+        <h3 className="text-3xl font-bold">233</h3>
       </div>
       <div>{content}</div>
     </div>
