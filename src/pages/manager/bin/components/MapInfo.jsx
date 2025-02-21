@@ -24,8 +24,8 @@ function MapInfo({ currentStep, handleNext, handlePrevious, handleCancel }) {
     }
 
     return (
-        <div className="flex flex-col items-center w-full lg:w-[1060px] justify-center p-4 md:p-8">
-            <section className="space-y-4 w-full max-w-5xl">
+        <div className="flex flex-col items-center w-full  justify-center p-4 md:p-8">
+            <section className="space-y-4 w-full">
                 <section className="grid grid-cols-1 lg:grid-cols-2 gap-4">
                     <Input
                         placeholder="Latitude"
@@ -45,10 +45,10 @@ function MapInfo({ currentStep, handleNext, handlePrevious, handleCancel }) {
                 </section>
             </section>
 
-            <section className="flex  w-full justify-end mt-4 space-x-2 p-2 rounded-lg">
+            <section className="flex pt-4 w-full  justify-center mt-4 space-x-2 p-2 rounded-lg">
                 {currentStep > 1 && (
                     <button
-                        className="px-4 py-2 bg-gray-400 text-white rounded-lg"
+                        className="px-4 py-2 border border-primary text-primary rounded-lg"
                         onClick={handlePrevious}
                     >
                         Previous
@@ -56,14 +56,14 @@ function MapInfo({ currentStep, handleNext, handlePrevious, handleCancel }) {
                 )}
                 {currentStep < 3 ? (
                     <button
-                        className="px-4 py-2 bg-blue-500 text-white rounded-lg"
+                        className="px-4 py-2 bg-primary text-white rounded-lg"
                         onClick={handleNext}
                     >
                         Next
                     </button>
                 ) : (
                     <button
-                        className="px-4 py-2 bg-green-500 text-white rounded-lg"
+                        className="px-4 py-2 bg-primary text-white rounded-lg"
                         onClick={handleCancel}
                     >
                         Confirm

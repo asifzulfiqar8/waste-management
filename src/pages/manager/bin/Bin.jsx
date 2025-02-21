@@ -5,6 +5,8 @@ import Confirmation from './components/Confirmation';
 
 const Bin = () => {
   const [currentStep, setCurrentStep] = useState(1);
+  const [generalInfoData, setGeneralInfoData] = useState({});
+
 
   // Handlers for navigation
   const handleNext = () => {
@@ -20,9 +22,13 @@ const Bin = () => {
   };
 
   return (
-    <div className="flex h-full w-full  items-center justify-center">
-      <section className="p-4 bg-white rounded-lg shadow-lg">
+    <div className="flex  w-full  items-center justify-center">
+      
+      <section className="p-4 flex flex-col items-center bg-white w-full max-w-7xl ">
         {/* Stepper Navigation */}
+       <section className="text-4xl font-semibold text-black mb-6">
+       Add Bin
+       </section>
         <section className="flex items-center justify-center mb-6">
           {[1, 2, 3].map((step) => (
             <section key={step} className="flex flex-col items-center">
@@ -35,7 +41,8 @@ const Bin = () => {
                 </section>
                 {step < 3 && (
                   <section
-                    className={`flex-1 border-t w-16 lg:w-24 ${currentStep > step ? 'border-green-500' : 'border-gray-800'
+                  
+                    className={`flex-1 border-t w-16 lg:w-24 ${currentStep > step ? 'border-green-500' : 'border-gray-300'
                       }`}
                   ></section>
                 )}

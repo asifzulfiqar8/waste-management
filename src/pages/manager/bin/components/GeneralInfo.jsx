@@ -7,6 +7,34 @@ import { FiPlusCircle } from 'react-icons/fi';
 function GeneralInfo({ handleNext, currentStep }) {
     const [images, setImages] = useState([]);
     const [isDragging, setIsDragging] = useState(false);
+    const [formData, setFormData] = useState({
+        binName: '',
+        dustbinId: '',
+        address: '',
+        description: '',
+        sensorType: '',
+    });
+
+    // Handler function for form inputs
+    const formDataChangeHandler = (event) => {
+        const { name, value } = event.target;
+        setFormData((prevData) => ({
+            ...prevData,
+            [name]: value,
+        }));
+    };
+
+    // Custom handler for the dropdown since it doesn't use a normal event
+    const handleDropdownChange = (value) => {
+        setFormData((prevData) => ({
+            ...prevData,
+            sensorType: value,
+        }));
+    };
+
+    // For debugging form data
+    console.log("formData",formData);
+
 
     // Handle file upload
     const handleImageUpload = (e) => {
@@ -35,35 +63,63 @@ function GeneralInfo({ handleNext, currentStep }) {
         setIsDragging(false);
         handleImageUpload(e);
     };
+    const dropdownOptions = [
+        { option: "Option 1", value: "option1" },
+        { option: "Option 2", value: "option2" },
+        { option: "Option 3", value: "option3" },
+    ];
+
 
     return (
-        <div className="flex flex-col items-center w-full lg:w-[1060px] justify-center p-4 md:p-8">
-            <h1 className="text-2xl font-bold mb-6">General Information</h1>
+        <div className="flex flex-col items-center w-full  justify-center p-4 md:p-8">
+            <h1 className="text-2xl font-medium mb-6">General Bin Information</h1>
 
             {/* Form Fields */}
-            <section className="space-y-4 w-full max-w-5xl">
-                <section className="grid grid-cols-1  lg:grid-cols-3 gap-4">
-                    <Input placeholder="Bin Name" />
-                    <Input placeholder="Dustbin ID" />
-                    <Input placeholder="Address" />
+            <section className="space-y-4 w-full ">
+                <section className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+                    <Input
+                        type="text"
+                        name="binName"
+                        onChange={formDataChangeHandler}
+                        placeholder="Bin Name"
+                    />
+                    <Input
+                        type="text"
+                        name="dustbinId"
+                        onChange={formDataChangeHandler}
+                        placeholder="Dustbin ID"
+                    />
+                    <Input
+                        type="text"
+                        name="address"
+                        onChange={formDataChangeHandler}
+                        placeholder="Address"
+                    />
                 </section>
 
-                <section className="flex flex-col lg:flex-row gap-4 ">
-                    <section className='w-full'>
-
-                        <Input placeholder="Description" className=" " />
+                <section className="flex flex-col lg:flex-row gap-4">
+                    <section className="w-full">
+                        <Input
+                            type="text"
+                            name="description"
+                            onChange={formDataChangeHandler}
+                            placeholder="Description"
+                        />
                     </section>
-                    <section className='w-full lg:w-[48%] '>
 
-
-                        <Dropdown defaultText="Sensor type" className="" />
+                    <section className="w-full lg:w-[48%]">
+                        <Dropdown
+                           options={dropdownOptions}
+                           defaultText="Select an option"
+                           onSelect={handleDropdownChange}
+                        />
                     </section>
                 </section>
             </section>
 
             {/* Image Upload Section */}
-            <section className="p-5 w-full max-w-5xl">
-                <h1 className="text-xl font-bold mb-4">Upload or Drag Image</h1>
+            <section className="p-5 w-full flex flex-col items-center">
+                <h1 className="text-xl font-medium mb-4">Upload or Drag Image</h1>
 
                 <section className="flex flex-wrap gap-3 justify-center">
                     {/* Display uploaded images */}
@@ -108,7 +164,7 @@ function GeneralInfo({ handleNext, currentStep }) {
                     </div>
                 </section>
             </section>
-            <section className='flex   w-full justify-end'>
+            <section className='flex pt-4  w-full justify-center'>
 
 
                 {currentStep > 1 && (
