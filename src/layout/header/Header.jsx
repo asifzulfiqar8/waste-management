@@ -54,7 +54,7 @@ const Header = () => {
   }, [notificationRef, profileRef]);
 
   return (
-    <header className="h-[220px] sm:h-[180px] pl-4 pb-4 flex flex-col justify-between gap-6">
+    <header className="h-[180px] pl-4 pb-4 flex flex-col justify-between gap-6">
       <div className="flex items-center justify-between gap-6">
         <div>
           <div
