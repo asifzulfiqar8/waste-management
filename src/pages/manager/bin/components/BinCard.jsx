@@ -12,13 +12,13 @@ const time = [
 
 const BinCard = ({ data }) => {
   return (
-    <div className="bg-white rounded-2xl shadow-lg border-[1px] p-3 md:p-4">
+    <div className="bg-white rounded-2xl shadow-lg border-[1px]">
       <img
         src={data?.binImg}
         alt="card-img"
         className="rounded-t-lg w-[170px] mx-auto"
       />
-      <div className="px-4 md:px-5 pt-4 md:pt-5 rounded-b-lg">
+      <div className={`p-4 md:p-5 rounded-b-2xl ${getColor(data?.status)}`}>
         <div className="flex justify-between">
           <div className="pr-5">
             <h6 className="text-xs font-semibold text-[#4E4E4E] text-center">
@@ -69,3 +69,16 @@ const BinCard = ({ data }) => {
 };
 
 export default BinCard;
+
+const getColor = (type) => {
+  switch (type) {
+    case "full":
+      return "bg-[#FFF6F6]";
+    case "half":
+      return "bg-[#FFFAF4]";
+    case "empty":
+      return "bg-[#F6FFFF]";
+    default:
+      return "#FFFAF4";
+  }
+};
