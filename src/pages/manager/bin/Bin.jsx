@@ -1,74 +1,59 @@
-import React, { useState } from 'react';
-import GeneralInfo from './components/GeneralInfo';
-import MapInfo from './components/MapInfo';
-import Confirmation from './components/Confirmation';
+import { CiSearch } from "react-icons/ci";
+import TotalBins from "./components/TotalBins";
+import { Link } from "react-router-dom";
+import { AddIcon } from "../../../assets/svgs/icon";
+import BinCard from "./components/BinCard";
+import { binCardData } from "./utils/bin";
 
 const Bin = () => {
-  const [currentStep, setCurrentStep] = useState(1);
-  const [generalInfoData, setGeneralInfoData] = useState({});
-
-
-  // Handlers for navigation
-  const handleNext = () => {
-    if (currentStep < 3) setCurrentStep(currentStep + 1);
-  };
-
-  const handlePrevious = () => {
-    if (currentStep > 1) setCurrentStep(currentStep - 1);
-  };
-
-  const handleCancel = () => {
-    setCurrentStep(1);
-  };
-
   return (
-    <div className="flex  w-full  items-center justify-center">
-      
-      <section className="p-4 flex flex-col items-center bg-white w-full max-w-7xl ">
-        {/* Stepper Navigation */}
-       <section className="text-4xl font-semibold text-black mb-6">
-       Add Bin
-       </section>
-        <section className="flex items-center justify-center mb-6">
-          {[1, 2, 3].map((step) => (
-            <section key={step} className="flex flex-col items-center">
-              <section className="flex items-center">
-                <section
-                  className={`w-12 h-12 flex items-center justify-center rounded-full text-white ${currentStep >= step ? 'bg-primary' : 'bg-gray-300'
-                    }`}
-                >
-                  {step}
-                </section>
-                {step < 3 && (
-                  <section
-                  
-                    className={`flex-1 border-t w-16 lg:w-24 ${currentStep > step ? 'border-green-500' : 'border-gray-300'
-                      }`}
-                  ></section>
-                )}
-              </section>
-            </section>
+    <div>
+      <TotalBins />
+      <div className="bg-white rounded-lg shadow-lg p-2 md:p-4 border-[1px] mt-5">
+        <ListingHeaeder />
+        {/* divider */}
+        <div className="w-full h-[0.6px] bg-[#00000033] my-[18px]"></div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 max-h-[700px] overflow-y-scroll custom-scroll">
+          {binCardData.map((card, i) => (
+            <BinCard data={card} key={i} />
           ))}
-        </section>
-
-        {/* Step Titles */}
-        <section className="flex gap-5 lg:gap-16 justify-center mb-4">
-          <section className={`text-sm font-medium ${currentStep === 1 ? 'text-primary' : 'text-gray-500'}`}>General Info</section>
-          <section className={`text-sm font-medium ${currentStep === 2 ? 'text-primary' : 'text-gray-500'}`}>Mapping Info</section>
-          <section className={`text-sm font-medium ${currentStep === 3 ? 'text-primary' : 'text-gray-500'}`}>Confirmation</section>
-        </section>
-
-        {/* Step Components */}
-        {currentStep === 1 && <GeneralInfo currentStep={currentStep} handleNext={handleNext} />}
-        {currentStep === 2 && <MapInfo currentStep={currentStep} handleNext={handleNext} handlePrevious={handlePrevious} handleCancel={handleCancel} />}
-        {currentStep === 3 && <Confirmation currentStep={currentStep} handleNext={handleNext} handlePrevious={handlePrevious} handleCancel={handleCancel} />}
-
-        {/* Step Navigation Buttons */}
-        <section className="flex justify-between mt-4">
-        </section>
-      </section>
+        </div>
+      </div>
     </div>
   );
 };
 
 export default Bin;
+
+const ListingHeaeder = () => {
+  return (
+    <div className="flex flex-wrap justify-between gap-4">
+      <h6 className="text-base font-semibold text-[]">Bins Listing</h6>
+      <div className="flex flex-wrap items-center gap-3">
+        <div className="flex items-center gap-2 bg-transparent border border-[#e7e7e7] rounded-[10px] py-2 px-4 h-[38px]">
+          <CiSearch fontSize={20} color="#7E7E7E" />
+          <input
+            type="text"
+            placeholder="Search"
+            className="w-full text-xs md:text-sm font-medium bg-transparent border-none focus:outline-none text-[#939699]"
+          />
+        </div>
+        {["half-bins", "full-bins", "empty-bins"].map((item, i) => (
+          <button
+            className="border border-[#54545433] rounded-md py-2 px-4 text-xs text-[#484848] font-semibold capitalize hover:bg-primary hover:text-white"
+            key={i}
+          >
+            {item.split("-").join(" ")}
+          </button>
+        ))}
+        <Link
+          to="/add-bin"
+          className="flex items-center gap-3 text-[#060606CC] text-base font-semibold"
+        >
+          Add Bin
+          <AddIcon />
+        </Link>
+      </div>
+    </div>
+  );
+};

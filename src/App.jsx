@@ -13,6 +13,8 @@ const ManagerDashboard = lazy(() =>
   import("./pages/manager/dashboard/ManagerDashboard.jsx")
 );
 const Bin = lazy(() => import("./pages/manager/bin/Bin.jsx"));
+const AddBin = lazy(() => import("./pages/manager/bin/AddBin.jsx"));
+const BinDetail = lazy(() => import("./pages/manager/bin/BinDetail.jsx"));
 const Driver = lazy(() => import("./pages/manager/driver/Driver.jsx"));
 const Truck = lazy(() => import("./pages/manager/truck/Truck.jsx"));
 const Sensors = lazy(() => import("./pages/manager/sensors/Sensors.jsx"));
@@ -66,6 +68,8 @@ function App() {
           <Route path="/" element={<Manager />}>
             <Route index element={<ManagerDashboard />} />
             <Route path="bin" element={<Bin />} />
+            <Route path="add-bin" element={<AddBin />} />
+            <Route path="bin-detail/:id" element={<BinDetail />} />
             <Route path="truck" element={<Truck />} />
             <Route path="driver" element={<Driver />} />
             <Route path="sensors" element={<Sensors />} />

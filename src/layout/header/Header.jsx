@@ -17,7 +17,6 @@ const Header = () => {
   const pathSplit = pathname.split("/");
   const page = pathSplit[pathSplit.length - 1];
   const pageName = page.split("-").join(" ");
-  console.log("page", pageName);
 
   const mobileNavHandler = () => setMobileNav(!mobileNav);
 
@@ -122,7 +121,7 @@ const Header = () => {
       </div>
       <div className="flex flex-wrap items-center gap-4">
         <h2 className="text-lg md:text-2xl text-white font-semibold capitalize basis-[30%]">
-          {page === "" ? "Dashboard" : page}
+          {page === "" ? "Dashboard" : pageName}
         </h2>
       </div>
       <div
