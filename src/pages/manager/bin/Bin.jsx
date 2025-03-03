@@ -28,7 +28,7 @@ export default Bin;
 const ListingHeaeder = () => {
   return (
     <div className="flex flex-wrap justify-between gap-4">
-      <h6 className="text-base font-semibold text-[]">Bins Listing</h6>
+      <h6 className="text-base font-semibold text-[#060606CC]">Bins Listing</h6>
       <div className="flex flex-wrap items-center gap-3">
         <div className="flex items-center gap-2 bg-transparent border border-[#e7e7e7] rounded-[10px] py-2 px-4 h-[38px]">
           <CiSearch fontSize={20} color="#7E7E7E" />
