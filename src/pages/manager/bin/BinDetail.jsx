@@ -3,6 +3,8 @@ import { binCardData } from "./utils/bin";
 import CardOnDetail from "./components/CardOnDetail";
 import MapView from "./components/MapView";
 import WasteVolume from "./components/WasteVolume";
+import RecycleRate from "./components/RecycleRate";
+import FillLevelTrend from "./components/FillLevelTrend";
 
 const BinDetail = () => {
   const { id } = useParams();
@@ -23,10 +25,10 @@ const BinDetail = () => {
         <WasteVolume />
       </div>
       <div className="lg:col-span-3 bg-white rounded-lg shadow-lg p-2 md:p-4 border-[1px]">
-        3
+        <RecycleRate />
       </div>
       <div className="lg:col-span-3 bg-white rounded-lg shadow-lg p-2 md:p-4 border-[1px]">
-        3
+        <FillLevelTrend />
       </div>
     </div>
   );
