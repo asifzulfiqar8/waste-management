@@ -30,14 +30,14 @@ const ListingHeaeder = () => {
     <div className="flex flex-wrap justify-between gap-4">
       <h6 className="text-base font-semibold text-[#060606CC]">Bins Listing</h6>
       <div className="flex flex-wrap items-center gap-3">
-        <div className="flex items-center gap-2 bg-transparent border border-[#e7e7e7] rounded-[10px] py-2 px-4 h-[38px]">
-          <CiSearch fontSize={20} color="#7E7E7E" />
-          <input
-            type="text"
-            placeholder="Search"
-            className="w-full text-xs md:text-sm font-medium bg-transparent border-none focus:outline-none text-[#939699]"
-          />
-        </div>
+      <div className="flex items-center gap-2 bg-transparent border border-[#e7e7e7] rounded-[10px] py-2 px-4 h-[38px]">
+        <CiSearch fontSize={20} color="#7E7E7E" />
+        <input
+          type="text"
+          placeholder="Search"
+          className="w-full text-xs md:text-sm font-medium bg-transparent border-none focus:outline-none text-[#939699]"
+        />
+      </div>
         {["half-bins", "full-bins", "empty-bins"].map((item, i) => (
           <button
             className="border border-[#54545433] rounded-md py-2 px-4 text-xs text-[#484848] font-semibold capitalize hover:bg-primary hover:text-white"

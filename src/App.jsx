@@ -6,6 +6,7 @@ import Login from "./pages/auth/forms/Login.jsx";
 import Signup from "./pages/auth/forms/Signup.jsx";
 import Forget from "./pages/auth/forms/Forget.jsx";
 import Reset from "./pages/auth/forms/Reset.jsx";
+import TruckDetail from "./pages/manager/truck/utils/TruckDetail.jsx";
 
 // manager routes
 const Manager = lazy(() => import("./pages/manager/index.jsx"));
@@ -72,6 +73,7 @@ function App() {
             <Route path="add-bin" element={<AddBin />} />
             <Route path="bin-detail/:id" element={<BinDetail />} />
             <Route path="truck" element={<Truck />} />
+            <Route path="truck-detail" element={<TruckDetail />} />
             <Route path="driver" element={<Driver />} />
             <Route path="add-driver" element={<AddDriver />} />
             <Route path="sensors" element={<Sensors />} />
