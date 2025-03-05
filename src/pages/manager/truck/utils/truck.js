@@ -294,41 +294,54 @@ const driverData = {
 
 const violationsData = [
     {
-      id: 1,
-      name: 'Speeding',
-      time: '30min ago',
-      image:overload, // Replace with your image source
-      details: 'Exceeded speed limit by 20mph.',
+        id: 1,
+        name: 'Speeding',
+        time: '30min ago',
+        image: overload, // Replace with your image source
+        details: 'Exceeded speed limit by 20mph.',
     },
     {
-      id: 2,
-      name: 'Illegal Parking',
-      time: '1hr ago',
-      image:overload, // Replace with your image source
-      details: 'Parked in a no-parking zone.',
+        id: 2,
+        name: 'Illegal Parking',
+        time: '1hr ago',
+        image: overload, // Replace with your image source
+        details: 'Parked in a no-parking zone.',
     },
     {
-      id: 3,
-      name: 'Red Light Violation',
-      time: '2hr ago',
-      image:overload, // Replace with your image source
-      details: 'Ran a red light at Main St.',
+        id: 3,
+        name: 'Red Light Violation',
+        time: '2hr ago',
+        image: overload, // Replace with your image source
+        details: 'Ran a red light at Main St.',
     },
     {
-      id: 4,
-      name: 'Seatbelt Violation',
-      time: '3hr ago',
-      image:overload, // Replace with your image source
-      details: 'Driver not wearing a seatbelt.',
+        id: 4,
+        name: 'Seatbelt Violation',
+        time: '3hr ago',
+        image: overload, // Replace with your image source
+        details: 'Driver not wearing a seatbelt.',
     },
     {
-      id: 5,
-      name: 'Overloading',
-      time: '4hr ago',
-      image:overload, // Replace with your image source
-      details: 'Truck overloaded by 500kg.',
+        id: 5,
+        name: 'Overloading',
+        time: '4hr ago',
+        image: overload, // Replace with your image source
+        details: 'Truck overloaded by 500kg.',
     },
-  ];
+];
+const routesData = [
+    { id: 1, title: 'Eyland Ave to Hilside Ave', time: '02 min ago' },
+    { id: 2, title: 'Route B', time: '05 min ago' },
+    { id: 3, title: 'Route C', time: '10 min ago' },
+    { id: 4, title: 'Route C', time: '10 min ago' },
+    { id: 5, title: 'Route C', time: '10 min ago' },
+    { id: 6, title: 'Route C', time: '10 min ago' },
+    { id: 7, title: 'Route C', time: '10 min ago' },
+    { id: 8, title: 'Route C', time: '10 min ago' },
+    { id: 9, title: 'Route C', time: '10 min ago' },
+    // add more routes as needed
+];
 
 
-export { tuckData, truckListData, fuelData, trucks, truckData, driverData,violationsData };
+
+export { tuckData, truckListData, fuelData, trucks, truckData, driverData, violationsData, routesData };

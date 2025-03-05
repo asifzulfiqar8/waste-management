@@ -13,6 +13,6 @@ const Button = ({ text, bg, height, width, color, ...rest }) => {
       {text}
     </button>
   );
-};
+};``
 
 export default Button;

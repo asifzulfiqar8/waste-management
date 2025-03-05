@@ -6,13 +6,13 @@ const TruckInfo = ({ truckData }) => {
     const { image, details } = truckData;
 
     return (
-        <section className="flex flex-col bg-white rounded-lg shadow-lg p-2 md:p-4 border-[1px] mt-5">
+        <section className="flex flex-col bg-white rounded-lg shadow-lg p-1 md:p-2 w-full border-[1px] ">
             {/* Truck Image */}
             <section>
                 <img
                     src={image}
                     alt="Truck"
-                    className="rounded-t-lg w-[380px] mx-auto"
+                    className="rounded-t-lg  object-cover h-full md:mx-auto"
                 />
             </section>
             {/* Truck Details */}

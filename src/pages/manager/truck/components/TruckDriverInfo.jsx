@@ -48,17 +48,17 @@ const TruckDriverInfo = ({ driverData }) => {
     const { image, details } = driverData;
 
     return (
-        <section className="flex flex-col bg-white rounded-lg shadow-lg p-2 md:p-4 border mt-5">
+        <section className="flex flex-col bg-white rounded-lg shadow-lg p-1 w-full md:p-2 border ">
             <header className="text-lg font-bold ">Driver Details</header>
-            <section className="flex gap-2">
-                <section>
+            <section className="flex gap-2 w-full">
+                <section className='w-ful '>
                     <img
                         src={image || DriverFallback}
                         alt="Driver"
-                        className="rounded-t-lg w-[170px] mx-auto"
+                        className="rounded-t-lg object-cover h-full  mx-auto"
                     />
                 </section>
-                <section className="flex flex-col justify-between">
+                <section className="flex flex-col w-full md:w-[60%] justify-between">
                     {details.map((detail, index) => (
                         <React.Fragment key={index}>
                             <section className="flex flex-col items-start">

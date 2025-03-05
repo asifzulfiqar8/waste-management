@@ -52,7 +52,7 @@ const ViolationsAccordion = () => {
 
     return (
         <section
-            className="flex flex-col justify-between w-[380px] h-[275px] overflow-auto bg-white rounded-lg shadow-lg p-2 md:p-4 border-[1px] mt-5"
+            className="flex flex-col justify-between h-[260px]  lg:h-[290px]   w-full overflow-auto bg-white rounded-lg shadow-lg p-2 md:p-4 border-[1px] "
 
         >
             {violationsData.map((violation) => (
