@@ -13,8 +13,8 @@ function Confirmation({
   const [longitude, setLongitude] = useState(-0.09);
 
   const [formData, setFormData] = useState({
-    driverName: "",
-    driverId: "",
+    truckName: "",
+    truckId: "",
     address: "",
     description: "",
     sensorType: "",
@@ -55,17 +55,17 @@ function Confirmation({
           <section className="grid grid-cols-1 lg:grid-cols-2  gap-4">
             <Input
               type="text"
-              name="driverName"
+              name="truckName"
               onChange={formDataChangeHandler}
-              placeholder="Driver Name"
-              label="Driver name"
+              placeholder="Truck Name"
+              label="Truck name"
             />
             <Input
               type="text"
-              name="driverId"
+              name="truckId"
               onChange={formDataChangeHandler}
-              label="Driver name"
-              placeholder="Driver ID"
+              label="Truck id"
+              placeholder="Truck ID"
             />
             <Input
               type="text"

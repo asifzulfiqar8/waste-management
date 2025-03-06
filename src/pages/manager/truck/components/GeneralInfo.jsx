@@ -8,8 +8,8 @@ function GeneralInfo({ handleNext, currentStep }) {
   const [images, setImages] = useState([]);
   const [isDragging, setIsDragging] = useState(false);
   const [formData, setFormData] = useState({
-    driverName: "",
-    driverId: "",
+    truckName: "",
+    truckId: "",
     address: "",
     description: "",
     sensorType: "",
@@ -70,22 +70,22 @@ function GeneralInfo({ handleNext, currentStep }) {
 
   return (
     <div className="flex flex-col items-center w-full  justify-center p-4 md:p-8">
-      <h1 className="text-2xl font-medium mb-6">General Driver Information</h1>
+      <h1 className="text-2xl font-medium mb-6">General Truck Information</h1>
 
       {/* Form Fields */}
       <section className="space-y-4 w-full ">
         <section className="grid grid-cols-1 lg:grid-cols-3 gap-4">
           <Input
             type="text"
-            name="driverName"
+            name="truckName"
             onChange={formDataChangeHandler}
-            placeholder="Driver Name"
+            placeholder="Truck Name"
           />
           <Input
             type="text"
-            name="driverId"
+            name="truckId"
             onChange={formDataChangeHandler}
-            placeholder="Driver ID"
+            placeholder="Truck ID"
           />
           <Input
             type="text"

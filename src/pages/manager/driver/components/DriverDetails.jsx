@@ -1,7 +1,8 @@
-import DataTable from "react-data-table-component";
-import { TruckWastDeatilStyles } from "../utils/TruckWastDeatilStyles";
+import React from 'react';
+import DataTable from 'react-data-table-component';
+import { DriverDetailsTableStyle } from '../utils/DriverDetailsTableStyle';
 
-const TruckWasteDetails = ({ heading, data, columns }) => {
+function DriverDetails({ heading, data, columns }) {
     return (
         <section className="h-full ">
             <section className="flex items-center justify-between  p-2">
@@ -14,16 +15,16 @@ const TruckWasteDetails = ({ heading, data, columns }) => {
                     </button>
                 </section>
             </section>
-            <section className="  h-[640px] overflow-auto">
+            <section className="  h-[640px] custom-scroll overflow-auto">
                 <DataTable
                     columns={columns}
                     data={data}
-                    customStyles={TruckWastDeatilStyles}
+                    customStyles={DriverDetailsTableStyle}
                     pagination
                 />
             </section>
         </section>
     );
-};
+}
 
-export default TruckWasteDetails;
+export default DriverDetails

@@ -2,13 +2,21 @@ import { Link } from "react-router-dom";
 import TotalDrivers from "./components/TotalDrivers";
 import { CiSearch } from "react-icons/ci";
 import { AddIcon } from "../../../assets/svgs/icon";
+import DriverCard from "./components/DriverCard";
+import drivers from "./utils/driver";
 
 const Driver = () => {
   return (
     <div>
       <TotalDrivers />
       <div className="bg-white rounded-lg shadow-lg p-2 md:p-4 border-[1px] mt-5">
-        <ListingHeaeder />
+        <ListingHeader />
+        <div className="w-full h-[0.6px] bg-[#00000033] my-[18px]"></div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 max-h-[700px] overflow-y-scroll custom-scroll">
+          {drivers?.map((driver, i) => (
+            <DriverCard driver={driver} key={i} />
+          ))}
+        </div>
       </div>
     </div>
   );
@@ -16,7 +24,7 @@ const Driver = () => {
 
 export default Driver;
 
-const ListingHeaeder = () => {
+const ListingHeader = () => {
   return (
     <div className="flex flex-wrap justify-between gap-4">
       <h6 className="text-base font-semibold text-[#060606CC]">Bins Listing</h6>
@@ -45,6 +53,7 @@ const ListingHeaeder = () => {
           <AddIcon />
         </Link>
       </div>
+
     </div>
   );
 };

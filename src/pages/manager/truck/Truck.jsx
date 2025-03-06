@@ -110,7 +110,7 @@ const ListingHeaeder = () => {
           </button>
         ))}
         <Link
-          to="/add-bin"
+          to="/add-truck"
           className="flex items-center gap-3 text-[#060606CC] text-base font-semibold"
         >
           Add Truck
