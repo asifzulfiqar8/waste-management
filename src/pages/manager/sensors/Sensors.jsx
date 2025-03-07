@@ -1,8 +1,11 @@
-import TotalSensor from "./components/TotalSensor";
-import { AddIcon } from "../../../assets/svgs/icon";
-import { CiSearch } from "react-icons/ci";
 import { useState } from "react";
+import { CiSearch } from "react-icons/ci";
+import { AddIcon } from "../../../assets/svgs/icon";
 import Modal from "../../../components/shared/small/Modal";
+import SensorTable from "./components/SensorTable";
+import TotalSensor from "./components/TotalSensor";
+import AddSensor from "./AddSensor";
+
 
 const Sensors = () => {
   const [modelOpen, setModelOpen] = useState(false);
@@ -13,10 +16,13 @@ const Sensors = () => {
       <div className="bg-white rounded-lg shadow-lg p-2 md:p-4 border-[1px] mt-5">
         <ListingHeaeder setModalOpen={setModelOpen} />
         <div className="w-full h-[0.6px] bg-[#00000033] my-[18px]"></div>
+        <section className="h-[628px] overflow-auto custom-scroll">
+          <SensorTable />
+        </section>
       </div>
       {modelOpen && (
-        <Modal title="Add Sensor" onClose={closeModalHandler}>
-          Add Sensor
+        <Modal onClose={closeModalHandler}>
+          <AddSensor/>
         </Modal>
       )}
     </div>

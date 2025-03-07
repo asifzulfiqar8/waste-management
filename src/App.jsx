@@ -9,6 +9,7 @@ import Reset from "./pages/auth/forms/Reset.jsx";
 import DriverDetail from "./pages/manager/driver/DriverDetail.jsx";
 import TruckDetail from "./pages/manager/truck/TruckDetail.jsx";
 import AddTruck from "./pages/manager/truck/AddTruck.jsx";
+import Recycle from "./pages/manager/recycle/Recycle.jsx";
 
 // manager routes
 const Manager = lazy(() => import("./pages/manager/index.jsx"));
@@ -82,6 +83,7 @@ function App() {
             <Route path="driver-detail" element={<DriverDetail />} />
 
             <Route path="sensors" element={<Sensors />} />
+            <Route path="recycle" element={<Recycle />} />
             <Route path="settings" element={<Settings />} />
           </Route>
         </Routes>

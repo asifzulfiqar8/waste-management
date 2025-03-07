@@ -1,6 +1,6 @@
 import React from "react";
 
-const SensorsIcon = ({isActive}) => {
+const SensorsIcon = ({ isActive }) => {
   return (
     <svg
       width="20"

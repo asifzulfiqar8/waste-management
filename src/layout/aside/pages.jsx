@@ -4,9 +4,11 @@ import {
     TruckIcon,
     DriverIcon,
     SensorsIcon,
-    SettingIcon
+    SettingIcon,
+    Recycle
   } from "../../assets/svgs/icon";
-  
+  import { LiaRecycleSolid } from "react-icons/lia";
+
   export const pages = [
     {
       id: 1,
@@ -43,6 +45,12 @@ import {
       title: "Settings",
       link: '/settings',
       icon: <SettingIcon />,
+    },
+    {
+      id: 7,
+      title: "Recycle",
+      link: '/recycle',
+      icon: <Recycle  />,
     },
   ];
   
