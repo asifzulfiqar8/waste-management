@@ -17,9 +17,27 @@ const Header = () => {
   const pathSplit = pathname.split("/");
   const page = pathSplit[pathSplit.length - 1];
   const pageName = page.split("-").join(" ");
-
+  console.log("pageName", pageName)
   const mobileNavHandler = () => setMobileNav(!mobileNav);
 
+  function getPageOverviewName(pageName) {
+    switch (pageName.toLowerCase()) {
+      case 'bin report':
+        return 'bin report overview';
+      case 'truck report':
+        return 'truck report overview';
+      case 'driver report':
+        return 'driver report overview';
+      case 'recycle report':
+        return 'recycle report overview';
+      case 'wast report':
+        return 'wast report overview';
+      default:
+        return pageName;
+    }
+  }
+  
+  const displayName = getPageOverviewName(pageName);
   const notificationOpenHandler = (e) => {
     setIsNotificationOpen(!isNotificationOpen);
     if (profileRef.current && notificationRef.current.contains(e.target)) {
@@ -76,11 +94,10 @@ const Header = () => {
               </p>
             </div>
             <div
-              className={`absolute top-[35px] right-[-12rem] sm:right-0 z-10 w-[300px] sm:w-[320px] overflow-y-scroll border-2 border-[#e4e4e43b] shadow-md bg-white rounded-lg custom-scroll transition-all duration-700 ${
-                isNotificationOpen
+              className={`absolute top-[35px] right-[-12rem] sm:right-0 z-10 w-[300px] sm:w-[320px] overflow-y-scroll border-2 border-[#e4e4e43b] shadow-md bg-white rounded-lg custom-scroll transition-all duration-700 ${isNotificationOpen
                   ? "h-[300px] opacity-100"
                   : "h-0 invisible opacity-0"
-              }`}
+                }`}
             >
               <Notification />
             </div>
@@ -100,19 +117,17 @@ const Header = () => {
             <div
               onClick={profileOpenHandler}
               ref={profileRef}
-              className={`transition-all duration-400 cursor-pointer ${
-                isProfileOpen ? "rotate-180" : "rotate-0"
-              }`}
+              className={`transition-all duration-400 cursor-pointer ${isProfileOpen ? "rotate-180" : "rotate-0"
+                }`}
             >
               <HiChevronDown color="#040404CC" fontSize={20} />
             </div>
             <div
               onClick={profileOpenHandler}
-              className={`absolute top-[45px] right-0 border-2 border-[#e4e4e43b] w-[150px] shadow-md rounded-lg custom-scroll transition-all duration-400 ${
-                isProfileOpen
+              className={`absolute top-[45px] right-0 border-2 border-[#e4e4e43b] w-[150px] shadow-md rounded-lg custom-scroll transition-all duration-400 ${isProfileOpen
                   ? "h-[76px] opacity-100"
                   : "h-0 invisible opacity-0"
-              }`}
+                }`}
             >
               <Profile />
             </div>
@@ -121,21 +136,19 @@ const Header = () => {
       </div>
       <div className="flex flex-wrap items-center gap-4">
         <h2 className="text-lg md:text-2xl text-white font-semibold capitalize basis-[30%]">
-          {page === "" ? "Dashboard" : pageName}
+          {page === "" ? "Dashboard" : displayName}
         </h2>
       </div>
       <div
-        className={`block xl:hidden fixed w-full h-full inset-0 bg-[#00000071] z-50 transition-all duration-500 ${
-          mobileNav
+        className={`block xl:hidden fixed w-full h-full inset-0 bg-[#00000071] z-50 transition-all duration-500 ${mobileNav
             ? "visible opacity-100"
             : "invisible opacity-0 pointer-events-none"
-        }`}
+          }`}
         onClick={() => setMobileNav(false)}
       >
         <div
-          className={`absolute top-3 left-3 h-full transition-transform duration-500 ${
-            mobileNav ? "translate-x-0" : "-translate-x-full"
-          }`}
+          className={`absolute top-3 left-3 h-full transition-transform duration-500 ${mobileNav ? "translate-x-0" : "-translate-x-full"
+            }`}
         >
           <Aside />
         </div>

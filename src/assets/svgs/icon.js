@@ -11,6 +11,9 @@ import LgDriverIcon from "./dashboard/DriverIcon";
 import RingIcon from "./default/RingIcon";
 import AddIcon from "./default/AddIcon";
 import Recycle from "./aside/Recycle";
+import Truck from "./aside/Truck";
+import Driver from "./aside/Driver";
+import Wast from "./aside/Wast";
 
 export {
   DashboardIcon,
@@ -25,5 +28,8 @@ export {
   LgDriverIcon,
   RingIcon,
   AddIcon,
-  Recycle
+  Recycle,
+  Truck,
+  Driver,
+  Wast
 };

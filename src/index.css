@@ -46,3 +46,10 @@ body {
   margin: 0 !important;
   width: 500px !important;
 }
+/* In your main CSS file */
+/* .rdt_TableHeadCell > div {
+  max-width: 50px !important;
+  white-space: normal !important;
+  word-break: break-word !important;
+  display: block !important;
+} */
