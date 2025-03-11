@@ -46,10 +46,27 @@ body {
   margin: 0 !important;
   width: 500px !important;
 }
-/* In your main CSS file */
-/* .rdt_TableHeadCell > div {
-  max-width: 50px !important;
-  white-space: normal !important;
-  word-break: break-word !important;
-  display: block !important;
-} */
+
+.custom-radio {
+  appearance: none;
+  width: 0.75rem;
+  height: 0.75rem;
+  border: 1px solid #01B67A; /* Primary border color */
+  border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+}
+
+.custom-radio:checked::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0.4rem;  /* Adjusted size for the inner dot */
+  height: 0.4rem;
+  border-radius: 50%;
+  background-color: #01B67A; /* Primary color */
+}

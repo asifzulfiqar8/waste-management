@@ -8,7 +8,8 @@ import {
   Recycle,
   Truck,
   Driver,
-  // Recycle,
+  Configuration,
+  Alert,
   Wast
 } from "../../assets/svgs/icon";
 import { LiaRecycleSolid } from "react-icons/lia";
@@ -85,5 +86,17 @@ export const pages = [
     title: "Wast Report",
     link: '/wast-report',
     icon: <Wast />,
+  },
+  {
+    id: 9,
+    title: "Configuration",
+    link: '/configuration',
+    icon: <Configuration />,
+  },
+  {
+    id: 9,
+    title: "Alert",
+    link: '/alert',
+    icon: <Alert />,
   },
 ];

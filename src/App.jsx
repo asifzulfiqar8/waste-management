@@ -15,6 +15,8 @@ import TruckReport from "./pages/manager/truckReport/TruckReport.jsx";
 import DriverReport from "./pages/manager/driverReport/DriverReport.jsx";
 import RecycleReport from "./pages/manager/recycleRreport/RecycleReport.jsx";
 import WastReport from "./pages/manager/wastReport/WastReport.jsx";
+import Configuration from "./pages/manager/Configuration/Configuration.jsx";
+import Alert from "./pages/manager/Alert/Alert.jsx";
 
 // manager routes
 const Manager = lazy(() => import("./pages/manager/index.jsx"));
@@ -93,6 +95,8 @@ function App() {
             <Route path="driver-report" element={<DriverReport />} />
             <Route path="recycle-report" element={<RecycleReport />} />
             <Route path="wast-report" element={<WastReport />} />
+            <Route path="configuration" element={<Configuration />} />
+            <Route path="alert" element={<Alert />} />
 
             <Route path="settings" element={<Settings />} />
           </Route>

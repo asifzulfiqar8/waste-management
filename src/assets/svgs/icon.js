@@ -14,6 +14,8 @@ import Recycle from "./aside/Recycle";
 import Truck from "./aside/Truck";
 import Driver from "./aside/Driver";
 import Wast from "./aside/Wast";
+import Configuration from "./aside/Configuration";
+import Alert from "./aside/Alert";
 
 export {
   DashboardIcon,
@@ -31,5 +33,7 @@ export {
   Recycle,
   Truck,
   Driver,
-  Wast
+  Wast,
+  Configuration,
+  Alert,
 };
