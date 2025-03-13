@@ -16,6 +16,7 @@ import Driver from "./aside/Driver";
 import Wast from "./aside/Wast";
 import Configuration from "./aside/Configuration";
 import Alert from "./aside/Alert";
+import Route from "./aside/Route";
 
 export {
   DashboardIcon,
@@ -36,4 +37,5 @@ export {
   Wast,
   Configuration,
   Alert,
+  Route
 };

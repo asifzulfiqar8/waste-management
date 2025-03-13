@@ -1,28 +1,36 @@
 import { lazy, Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Loader from "./components/shared/small/Loader.jsx";
-import AuthLayout from "./pages/auth/AuthLayout.jsx";
-import Login from "./pages/auth/forms/Login.jsx";
-import Signup from "./pages/auth/forms/Signup.jsx";
-import Forget from "./pages/auth/forms/Forget.jsx";
-import Reset from "./pages/auth/forms/Reset.jsx";
-import DriverDetail from "./pages/manager/driver/DriverDetail.jsx";
-import TruckDetail from "./pages/manager/truck/TruckDetail.jsx";
-import AddTruck from "./pages/manager/truck/AddTruck.jsx";
-import Recycle from "./pages/manager/recycle/Recycle.jsx";
-import BinReport from "./pages/manager/binReport/BinReport.jsx";
-import TruckReport from "./pages/manager/truckReport/TruckReport.jsx";
-import DriverReport from "./pages/manager/driverReport/DriverReport.jsx";
-import RecycleReport from "./pages/manager/recycleRreport/RecycleReport.jsx";
-import WastReport from "./pages/manager/wastReport/WastReport.jsx";
-import Configuration from "./pages/manager/Configuration/Configuration.jsx";
-import Alert from "./pages/manager/Alert/Alert.jsx";
+import ViewMap from "./pages/driver/pages/dashboard/ViewMap.jsx";
 
-// manager routes
+// Lazy load all components/pages
+const Loader = lazy(() => import("./components/shared/small/Loader.jsx"));
+const AuthLayout = lazy(() => import("./pages/auth/AuthLayout.jsx"));
+const Login = lazy(() => import("./pages/auth/forms/Login.jsx"));
+const Signup = lazy(() => import("./pages/auth/forms/Signup.jsx"));
+const Forget = lazy(() => import("./pages/auth/forms/Forget.jsx"));
+const Reset = lazy(() => import("./pages/auth/forms/Reset.jsx"));
+
+const DriverDetail = lazy(() => import("./pages/manager/driver/DriverDetail.jsx"));
+const TruckDetail = lazy(() => import("./pages/manager/truck/TruckDetail.jsx"));
+const AddTruck = lazy(() => import("./pages/manager/truck/AddTruck.jsx"));
+const Recycle = lazy(() => import("./pages/manager/recycle/Recycle.jsx"));
+const BinReport = lazy(() => import("./pages/manager/binReport/BinReport.jsx"));
+const TruckReport = lazy(() => import("./pages/manager/truckReport/TruckReport.jsx"));
+const DriverReport = lazy(() => import("./pages/manager/driverReport/DriverReport.jsx"));
+const RecycleReport = lazy(() => import("./pages/manager/recycleRreport/RecycleReport.jsx"));
+const WastReport = lazy(() => import("./pages/manager/wastReport/WastReport.jsx"));
+const Configuration = lazy(() => import("./pages/manager/Configuration/Configuration.jsx"));
+const Alert = lazy(() => import("./pages/manager/Alert/Alert.jsx"));
+
+const Drivers = lazy(() => import("./pages/driver/index.jsx"));
+const DriverDashboard = lazy(() => import("./pages/driver/pages/dashboard/DriverDashboard.jsx"));
+const DriverAlerts = lazy(() => import("./pages/driver/pages/alerts/DriverAlerts.jsx"));
+const DriverRoutes = lazy(() => import("./pages/driver/pages/routes/DriverRoute.jsx"));
+const DriverSettings = lazy(() => import("./pages/driver/pages/setting/DriverSettings.jsx"));
+
+// Manager routes lazy imports
 const Manager = lazy(() => import("./pages/manager/index.jsx"));
-const ManagerDashboard = lazy(() =>
-  import("./pages/manager/dashboard/ManagerDashboard.jsx")
-);
+const ManagerDashboard = lazy(() => import("./pages/manager/dashboard/ManagerDashboard.jsx"));
 const Bin = lazy(() => import("./pages/manager/bin/Bin.jsx"));
 const AddBin = lazy(() => import("./pages/manager/bin/AddBin.jsx"));
 const BinDetail = lazy(() => import("./pages/manager/bin/BinDetail.jsx"));
@@ -97,8 +105,15 @@ function App() {
             <Route path="wast-report" element={<WastReport />} />
             <Route path="configuration" element={<Configuration />} />
             <Route path="alert" element={<Alert />} />
-
             <Route path="settings" element={<Settings />} />
+          </Route>
+          <Route path="/drivers" element={<Drivers />}>
+            <Route index element={<DriverDashboard />} />
+
+            <Route path="view-map" element={<ViewMap />} />
+            <Route path="alert" element={<DriverAlerts />} />
+            <Route path="routes" element={<DriverRoutes />} />
+            <Route path="settings" element={<DriverSettings />} />
           </Route>
         </Routes>
       </Suspense>

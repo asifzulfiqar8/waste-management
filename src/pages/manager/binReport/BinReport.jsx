@@ -44,7 +44,7 @@ const BinReport = () => {
             isClearable
             placeholderText="Select start and end date"
           />
-         <Button width="w-[70px]" text="Export" />
+          <Button width="w-[70px]" text="Export" />
         </div>
       </header>
       <section className="mt-4 shadow-custom p-3 w-full bg-white rounded-lg border">
