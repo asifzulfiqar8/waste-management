@@ -147,7 +147,6 @@ const ViewMap = () => {
 
   return (
     <div className="rounded-xl ">
-      {/* Top bar */}
       <div className="bg-white shadow-lg p-3 border-[1px] rounded-t-xl">
         <div className="flex items-center justify-between flex-wrap">
         <h3 className="text-base font-semibold">Area Map </h3>
