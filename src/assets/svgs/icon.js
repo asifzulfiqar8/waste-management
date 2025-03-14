@@ -17,7 +17,14 @@ import Wast from "./aside/Wast";
 import Configuration from "./aside/Configuration";
 import Alert from "./aside/Alert";
 import Route from "./aside/Route";
-
+import Subscriptions from './aside/Subscriptions'
+import AllUsers from './aside/AllUsers'
+import UserBin from "./driver/allUsers/UserBin";
+import UserSensor from "./driver/allUsers/UserSensor";
+import UserTruck from "./driver/allUsers/UserTruck";
+import Premium from './driver/allUsers/Premium'
+import Standard from './driver/allUsers/Standard'
+import Basic from './driver/allUsers/Basic'
 export {
   DashboardIcon,
   SensorsIcon,
@@ -37,5 +44,13 @@ export {
   Wast,
   Configuration,
   Alert,
-  Route
+  Route,
+  Subscriptions,
+  AllUsers,
+  UserBin,
+  UserSensor,
+  UserTruck,
+  Premium,
+  Standard,
+  Basic
 };

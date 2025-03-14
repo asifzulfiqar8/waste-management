@@ -28,6 +28,12 @@ const DriverAlerts = lazy(() => import("./pages/driver/pages/alerts/DriverAlerts
 const DriverRoutes = lazy(() => import("./pages/driver/pages/routes/DriverRoute.jsx"));
 const DriverSettings = lazy(() => import("./pages/driver/pages/setting/DriverSettings.jsx"));
 
+const Admin = lazy(() => import('./pages/admin/index.jsx'));
+const AdminDashboard = lazy(() => import('./pages/admin/pages/dashboard/AdminDashboard.jsx'))
+const AddManager = lazy(() => import('./pages/admin/pages/addManager/AddManager.jsx'))
+const AllUsers = lazy(() => import('./pages/admin/pages/allUsers/AllUsers.jsx'))
+const AdminSettings = lazy(() => import('./pages/admin/pages/settings/AdminSettings.jsx'))
+const Subscriptions = lazy(() => import('./pages/admin/pages/subscriptions/Subscriptions.jsx'))
 // Manager routes lazy imports
 const Manager = lazy(() => import("./pages/manager/index.jsx"));
 const ManagerDashboard = lazy(() => import("./pages/manager/dashboard/ManagerDashboard.jsx"));
@@ -115,6 +121,17 @@ function App() {
             <Route path="routes" element={<DriverRoutes />} />
             <Route path="settings" element={<DriverSettings />} />
           </Route>
+          <Route path="/admin" element={<Admin />}>
+            <Route index element={<AdminDashboard />} />
+            <Route path="all-users" element={<AllUsers />} />
+            <Route path="subscriptions" element={<Subscriptions />} />
+            <Route path="settings" element={<AdminSettings />} />
+            <Route path="add-manager" element={<AddManager />} />
+
+
+          </Route>
+
+
         </Routes>
       </Suspense>
     </Router>
