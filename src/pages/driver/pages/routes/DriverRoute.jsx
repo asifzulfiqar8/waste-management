@@ -1,23 +1,19 @@
-import React, { useState } from 'react'
-import DatePicker from 'react-datepicker';
-import 'react-datepicker/dist/react-datepicker.css';
-import DataTable from 'react-data-table-component';
-import { routeData, routeDataColumns } from './utils/routeData';
-import routeTableStyle from './utils/routeTableStyle'
+import { useState } from "react";
+import DataTable from "react-data-table-component";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import { routeData, routeDataColumns } from "./utils/RouteData";
+import routeTableStyle from "./utils/routeTableStyle";
 
 function DriverRoute() {
-
   const [dateRange, setDateRange] = useState([null, null]);
   const [startDate, endDate] = dateRange;
   const handleDateChange = (update) => setDateRange(update);
 
-
   return (
     <div>
-      <section className='flex justify-between items-center'>
-        <section className='text-base font-semibold'>
-          Report
-        </section>
+      <section className="flex justify-between items-center">
+        <section className="text-base font-semibold">Report</section>
         <DatePicker
           className="border p-2 rounded-lg hover"
           selectsRange
@@ -29,7 +25,7 @@ function DriverRoute() {
         />
       </section>
       <section>
-      <DataTable
+        <DataTable
           columns={routeDataColumns}
           data={routeData}
           customStyles={routeTableStyle}
@@ -37,7 +33,7 @@ function DriverRoute() {
         />
       </section>
     </div>
-  )
+  );
 }
 
-export default DriverRoute
+export default DriverRoute;
