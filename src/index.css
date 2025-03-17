@@ -35,6 +35,10 @@ body {
   border-radius: 12px;
 }
 
+.scroll-0::-webkit-scrollbar {
+  width: 0px;
+}
+
 .leaflet-popup-close-button {
   display: none !important;
 }

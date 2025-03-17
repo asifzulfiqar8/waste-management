@@ -1,11 +1,13 @@
 import React from 'react';
 import { CiHeart } from "react-icons/ci";
+import { useNavigate } from 'react-router-dom';
 
 function DriverCard({ driver }) {
+     const navigate = useNavigate()
     const handleViewDetails = (id) => {
+        navigate(`/driver-detail/${id}`)
         console.log(id);
     };
-
     console.log("driver", driver);
 
     return (

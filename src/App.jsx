@@ -87,7 +87,6 @@ function App() {
               />
             }
           />
-
           <Route path="/" element={<Manager />}>
             <Route path="" />
           </Route>
@@ -101,7 +100,7 @@ function App() {
             <Route path="truck-detail/:id" element={<TruckDetail />} />
             <Route path="driver" element={<Driver />} />
             <Route path="add-driver" element={<AddDriver />} />
-            <Route path="driver-detail" element={<DriverDetail />} />
+            <Route path="driver-detail/:id" element={<DriverDetail />} />
             <Route path="sensors" element={<Sensors />} />
             <Route path="recycle" element={<Recycle />} />
             <Route path="bin-report" element={<BinReport />} />
@@ -126,11 +125,7 @@ function App() {
             <Route path="subscriptions" element={<Subscriptions />} />
             <Route path="settings" element={<AdminSettings />} />
             <Route path="add-manager" element={<AddManager />} />
-
-
           </Route>
-
-
         </Routes>
       </Suspense>
     </Router>
