@@ -115,7 +115,6 @@ function App() {
           </Route>
           <Route path="/drivers" element={<Drivers />}>
             <Route index element={<DriverDashboard />} />
-
             <Route path="view-map" element={<ViewMap />} />
             <Route path="alert" element={<DriverAlerts />} />
             <Route path="routes" element={<DriverRoutes />} />
