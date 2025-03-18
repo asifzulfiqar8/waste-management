@@ -1,4 +1,13 @@
 const DriverDetailsTableStyle = {
+  headRow: {
+    style: {
+      background: "#F1F3F9",
+      // borderTopLeftRadius: "6px",
+      // borderTopRightRadius: "6px",
+      borderRadius: '12px',
+      overflow: "hidden", // ensures the rounded corners are applied
+    },
+  },
     headCells: {
       style: {
         fontSize: "14px",

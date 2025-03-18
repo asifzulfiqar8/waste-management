@@ -3,8 +3,9 @@ import DataTable from 'react-data-table-component';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 
-import { recycleData, recycleDataColumns } from '../utils/recycle';
+// import { recycleData, recycleDataColumns } from '../utils/recycle';
 import { RecycleOverViewTableStyle } from '../utils/RecycleOverViewTableStyle';
+import { recycleData, recycleDataColumns } from '../utils/Recycle';
 
 function RecycleOverViewTable() {
   // State to hold the start and end dates as an array
@@ -12,12 +13,12 @@ function RecycleOverViewTable() {
   const [startDate, endDate] = dateRange;
 
   return (
-    <div>
+    <div className='w-full '>
       <section className="flex justify-between">
         <section>Recycling Overview</section>
         <section>
           <DatePicker
-          className=' p-2 rounded-lg'
+            className=' p-2 rounded-lg'
             selectsRange={true}
             startDate={startDate}
             endDate={endDate}

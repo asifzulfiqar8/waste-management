@@ -12,7 +12,7 @@ function Recycle() {
         <section className='p-2 bg-transparent border border-[#e7e7e7] rounded-[10px]  h-[650px]'>
             <RecycleTable/>
         </section>
-        <section>
+        <section className=' w-full overflow-auto'>
             <RecycleOverViewTable/>
         </section>
 

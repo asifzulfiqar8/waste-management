@@ -6,6 +6,7 @@ import DataTable from 'react-data-table-component';
 // import routeTableStyle from './utils/routeTableStyle'
 import { subscriptionData, subscriptionDataColumns } from '../utils/SubscriptionsData';
 import subscriptionTableStyle from '../utils/subscriptionTableStyle';
+import { FaCalendarAlt } from "react-icons/fa";
 
 function SubscriptionsManagement() {
 
@@ -31,15 +32,18 @@ function SubscriptionsManagement() {
               Status
             </button>
           </section>
-          <DatePicker
-            className="border px-2 py-1 rounded-lg hover"
-            selectsRange
-            startDate={startDate}
-            endDate={endDate}
-            onChange={handleDateChange}
-            isClearable
-            placeholderText="Select start and end date"
-          />
+          <div className='border px-2 rounded-lg flex  gap-2 items-center'>
+            <span><FaCalendarAlt /></span>
+            <DatePicker
+              className=" outline-none "
+              selectsRange
+              startDate={startDate}
+              endDate={endDate}
+              onChange={handleDateChange}
+              isClearable
+              placeholderText="Select start and end date"
+            />
+          </div>
         </section>
       </section>
       <section className='border p-2 rounded-lg shadow-lg'>

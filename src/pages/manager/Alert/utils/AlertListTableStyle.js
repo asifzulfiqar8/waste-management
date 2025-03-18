@@ -6,6 +6,8 @@ const AlertListTableStyle = {
         // borderTopRightRadius: "6px",
         borderRadius:'12px',
         overflow: "hidden", // ensures the rounded corners are applied
+        
+        
       },
     },
     headCells: {
@@ -13,6 +15,8 @@ const AlertListTableStyle = {
         fontSize: "14px",
         fontWeight: 700,
         // you can remove borderRadius here or adjust if needed
+        alignItems: "center",
+        justifyContent: "center",
       },
     },
     rows: {
@@ -26,6 +30,8 @@ const AlertListTableStyle = {
       style: {
         color: "#292D32",
         fontSize: "12px",
+        alignItems: "center",
+        justifyContent: "center",
       },
     },
   };

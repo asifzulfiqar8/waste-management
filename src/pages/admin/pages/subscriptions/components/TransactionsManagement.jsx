@@ -9,6 +9,7 @@ import DataTable from 'react-data-table-component';
 import transactionTable from '../utils/transactionTable';
 import { transactionData, transactionDataColumns } from '../utils/Transaction';
 import { CiSearch } from "react-icons/ci";
+import { FaCalendarAlt } from "react-icons/fa";
 
 function TransactionsManagement() {
 
@@ -27,7 +28,7 @@ function TransactionsManagement() {
                     <CiSearch fontSize={20} color="#7E7E7E" />
                     <input
                         type="text"
-                        placeholder="Search"
+                        placeholder="Search by transaction id"
                         className="w-full text-xs md:text-base bg-transparent border-none focus:outline-none text-[#7E7E7E]"
                     />
                 </section>
@@ -37,15 +38,18 @@ function TransactionsManagement() {
                             Status
                         </button>
                     </section>
-                    <DatePicker
-                        className="border px-2 py-1 rounded-lg hover"
-                        selectsRange
-                        startDate={startDate}
-                        endDate={endDate}
-                        onChange={handleDateChange}
-                        isClearable
-                        placeholderText="Select start and end date"
-                    />
+                    <div className='border px-2 rounded-lg flex  gap-2 items-center'>
+                        <span><FaCalendarAlt /></span>
+                        <DatePicker
+                            className=" outline-none "
+                            selectsRange
+                            startDate={startDate}
+                            endDate={endDate}
+                            onChange={handleDateChange}
+                            isClearable
+                            placeholderText="Select start and end date"
+                        />
+                    </div>
                 </section>
             </section>
             <section className='border p-2 rounded-lg shadow-lg'>

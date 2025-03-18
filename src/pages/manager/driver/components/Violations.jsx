@@ -13,7 +13,7 @@ const ViolationsAccordion = ({ violationsData }) => {
 
     return (
         <section
-            className="flex flex-col justify-between h-[260px]  lg:h-[290px] custom-scroll  w-full overflow-auto bg-white rounded-lg shadow-lg p-2 md:p-4 border-[1px] "
+            className="flex flex-col justify-between h-[260px]  lg:h-[297px] custom-scroll  w-full overflow-auto bg-white rounded-lg shadow-lg p-2 md:p-4 border-[1px] "
 
         >
             <section className='text-base font-semibold'>

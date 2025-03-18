@@ -57,11 +57,11 @@ const SensorTable = () => {
                 <div className="flex ">
                     <FaRegEdit
                         onClick={() => handleEdit(row)}
-                        className="cursor-pointer text-lg mr-2 text-blue-500 hover:text-blue-600"
+                        className="cursor-pointer text-lg mr-2 text-[#64AA42CC] "
                     />
                     <MdDeleteOutline
                         onClick={() => handleDelete(row.id)}
-                        className="cursor-pointer text-xl text-red-500 hover:text-red-600"
+                        className="cursor-pointer text-xl text-[#BA2222B2] "
                     />
                 </div>
             ),

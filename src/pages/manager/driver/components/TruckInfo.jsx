@@ -8,9 +8,9 @@ const TruckInfo = ({ truckData }) => {
     return (
         <section className="flex flex-col bg-white rounded-lg shadow-lg p-1 md:p-4 w-full border-[1px] ">
             {/* Truck Image */}
-            <section className='rounded-tl-2xl p-4  h-[177px] rounded-tr-2xl bg-cover bg-center'
+            <section className='rounded-tl-2xl mb-2   h-[177px] rounded-tr-2xl bg-cover bg-center'
                 style={{ backgroundImage: `url(${image})` }} >
-                <section className='p-1 pl-4 bg-white/25 rounded-xl  text-white text-lg font-bold '>
+                <section className='p-1 pl-4 m-3 bg-white/25 rounded-xl  text-white text-lg font-bold '>
                     linked truck
                 </section>
             </section>

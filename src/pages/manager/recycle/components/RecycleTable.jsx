@@ -65,7 +65,7 @@ const RecycleTable = () => {
       {/* Dropdown for filtering chart lines */}
       <div className='flex justify-end'>
         <select
-        className='border border-[#54545433] rounded-md py-2 px-4 text-xs text-[#484848] font-semibold capitalize '
+          className='border border-[#54545433] rounded-md py-2 px-4 text-xs text-[#484848] font-semibold capitalize '
           value={selectedLine}
           onChange={(e) => setSelectedLine(e.target.value)}
           style={{ padding: '8px', fontSize: '16px' }}
@@ -81,7 +81,10 @@ const RecycleTable = () => {
 
       {/* Chart Section */}
       <ResponsiveContainer width="100%" height={400}>
-        <LineChart data={data} margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
+        <LineChart data={data}
+          margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
+          
+        >
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="name" />
           <YAxis
@@ -106,9 +109,9 @@ const RecycleTable = () => {
       {/* Metrics Section (Always shows all totals) */}
       <div
         className="flex flex-col gap-4 p-0 lg:p-4 md:w-full overflow-auto"
-        
+
       >
-        <section className="flex justify-between text-xs font-extrabold">
+        <section className="flex justify-between text-[#474445] text-xs font-extrabold">
           <section>Metrics</section>
           <section className="flex w-[100px] justify-between">
             <section>Current</section>
@@ -119,9 +122,11 @@ const RecycleTable = () => {
           <section key={line.key} className="flex justify-between text-xs font-normal">
             <section>
               <span style={boxStyle(line.color)}></span>
-              {line.name}:
+              <span className='text-[#474445]'>
+                {line.name}:
+              </span>
             </section>
-            <section className="flex w-[100px] justify-between">
+            <section className="flex w-[100px] text-[#474445] justify-between">
               {getTotal(line.key)}kg
             </section>
           </section>

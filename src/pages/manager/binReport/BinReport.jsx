@@ -7,6 +7,7 @@ import Button from '../../../components/shared/small/Button';
 import DataTable from 'react-data-table-component';
 import { binDataColumns, binData } from './utils/binReport';
 import { BinReportTableStyle } from './utils/BinReportTableStyle';
+import { FaCalendarAlt } from "react-icons/fa";
 
 const BinReport = () => {
   const [dateRange, setDateRange] = useState([null, null]);
@@ -19,7 +20,7 @@ const BinReport = () => {
       <header className="flex w-full items-center justify-between">
         <h1 className="font-semibold text-base">Report</h1>
         <div className="flex items-center gap-4">
-          <div className="flex w-full items-center relative shadow-lg h-12 border rounded-xl border-[#CBCAD7] text-[#686677] px-2">
+          <div className="flex w-full items-center relative shadow-lg h-12 border-[0.6px] rounded-xl  text-[#686677] px-2">
             <IoSearch />
             <input
               type="search"
@@ -27,23 +28,26 @@ const BinReport = () => {
               placeholder="Search..."
             />
           </div>
-          <button className="w-12 h-9 flex items-center justify-center bg-white rounded-lg shadow-lg">
+          <button className=" w-12 h-11 border-[0.6px] flex items-center justify-center bg-white rounded-lg shadow-lg">
             <CiFilter />
           </button>
-          <div className="px-4 py-2 flex items-center justify-center bg-white rounded-lg shadow-lg">
+          <div className="px-4 py-2 border-[0.6px]  flex items-center justify-center bg-white rounded-lg shadow-lg">
             Status
           </div>
         </div>
         <div className="flex items-center gap-4">
-          <DatePicker
-            className="border p-2 rounded-lg hover"
-            selectsRange
-            startDate={startDate}
-            endDate={endDate}
-            onChange={handleDateChange}
-            isClearable
-            placeholderText="Select start and end date"
-          />
+          <div className='border p-2 rounded-lg flex  gap-2 items-center'>
+            <span><FaCalendarAlt /></span>
+            <DatePicker
+              className=" outline-none "
+              selectsRange
+              startDate={startDate}
+              endDate={endDate}
+              onChange={handleDateChange}
+              isClearable
+              placeholderText="Select start and end date"
+            />
+          </div>
           <Button width="w-[70px]" text="Export" />
         </div>
       </header>

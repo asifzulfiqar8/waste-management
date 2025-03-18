@@ -6,7 +6,7 @@ const DriverAlert = ({ image, binName, binPercentage, time1, time2, status }) =>
   const isFull = status.toLowerCase().includes("full");
 
   return (
-    <div className="flex w-full p-2 border-b">
+    <div className="flex w-full py-2 ">
       <div>
         <img src={image} alt="Bin" className="w-10 h-10 object-contain" />
       </div>
@@ -26,7 +26,7 @@ const DriverAlert = ({ image, binName, binPercentage, time1, time2, status }) =>
             <span className="text-[#7C7C7C]">{status}</span>
           </div>
         </div>
-        <div className="flex justify-between mt-2">
+        <div className="flex justify-between ">
           <span className="text-[#7C7C7C]">{time1}</span>
           <span className="text-[#7C7C7C]">{time2}</span>
         </div>
@@ -85,7 +85,7 @@ const BinAlert = ({ alerts }) => {
   });
 
   return (
-    <div>
+    <div className='border p-3 rounded-lg shadow-lg'>
       {sortedGroups.map((group) => (
         <div key={group.label}>
           <h3 className="text-lg font-bold mb-2">{group.label}</h3>

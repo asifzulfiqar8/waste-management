@@ -37,19 +37,19 @@ const WasteVolume = () => {
   };
 
   return (
-    <div className="flex flex-col bg-white rounded-lg shadow-lg p-1 w-full md:p-2 border">
+    <div className="flex flex-col bg-white rounded-lg shadow-lg p-1 w-full md:p-3 border">
       <h6 className="text-base font-semibold text-[#242731]">Progress</h6>
       <section className="flex mb-8">
         <section>
           <h6 className="text-3xl font-semibold text-[#242731]">24h</h6>
         </section>
         <section>
-          <div className="text-xs font-normal w-[64px] bg-red-300">
+          <div className="text-xs font-normal w-[64px] ">
             work time today
           </div>
         </section>
       </section>
-      <ResponsiveContainer width="100%" height={150}>
+      <ResponsiveContainer width="100%" height='100%'>
         <BarChart data={dailyData} barGap={10} barCategoryGap={20}>
           <XAxis
             dataKey="name"

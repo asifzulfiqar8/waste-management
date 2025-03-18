@@ -8,9 +8,9 @@ function AddSensor() {
     const [images, setImages] = useState([]);
     const [isDragging, setIsDragging] = useState(false);
     const [formData, setFormData] = useState({
-        driverName: "",
+        sensorName: "",
         driverId: "",
-        address: "",
+        uniqueKey: "",
         description: "",
         sensorType: "",
     });
@@ -78,39 +78,37 @@ function AddSensor() {
                 <section className="grid grid-cols-1 lg:grid-cols-3 gap-4">
                     <Input
                         type="text"
-                        name="driverName"
+                        name="sensorName"
                         onChange={formDataChangeHandler}
-                        placeholder="Driver Name"
+                        placeholder="Sensor Name"
+                    />
+                    <Dropdown
+                        options={dropdownOptions}
+                        defaultText="Sensor Type"
+                        onSelect={handleDropdownChange}
                     />
                     <Input
                         type="text"
-                        name="driverId"
+                        name="uniqueKey"
                         onChange={formDataChangeHandler}
-                        placeholder="Driver ID"
-                    />
-                    <Input
-                        type="text"
-                        name="address"
-                        onChange={formDataChangeHandler}
-                        placeholder="Address"
+                        placeholder="Unique Key"
                     />
                 </section>
 
                 <section className="flex flex-col lg:flex-row gap-4">
+                    <section className="w-full lg:w-[48%]">
+                        <Dropdown
+                            options={dropdownOptions}
+                            defaultText="Status"
+                            onSelect={handleDropdownChange}
+                        />
+                    </section>
                     <section className="w-full">
                         <Input
                             type="text"
                             name="description"
                             onChange={formDataChangeHandler}
                             placeholder="Description"
-                        />
-                    </section>
-
-                    <section className="w-full lg:w-[48%]">
-                        <Dropdown
-                            options={dropdownOptions}
-                            defaultText="Select an option"
-                            onSelect={handleDropdownChange}
                         />
                     </section>
                 </section>

@@ -127,39 +127,39 @@ const handleViewMap = (row) => {
 
 const routeDataColumns = [
   {
-    name: <CustomHeader title="Date" width="90px" />,
+    name: <CustomHeader title="Date" width="" />,
     selector: (row) => row.date,
   },
   {
-    name: <CustomHeader title="Start Point" width="90px" />,
+    name: <CustomHeader title="Start Point" width="" />,
     selector: (row) => row.startPoint,
   },
   {
-    name: <CustomHeader title="End Point" width="90px" />,
+    name: <CustomHeader title="End Point" width="" />,
     selector: (row) => row.endPoint,
   },
   {
-    name: <CustomHeader title="Total Distance Covered" width="90px" />,
+    name: <CustomHeader title="Total Distance Covered" width="" />,
     selector: (row) => `${row.totalDistanceCovered} km`,
   },
   {
-    name: <CustomHeader title="Total Bin Serviced" width="90px" />,
+    name: <CustomHeader title="Total Bin Serviced" width="" />,
     selector: (row) => `${row.totalBinServiced}`,
   },
   {
-    name: <CustomHeader title="Wast Collected" width="90px" />,
+    name: <CustomHeader title="Wast Collected" width="" />,
     selector: (row) => `${row.wastCollected}`,
   },
   {
-    name: <CustomHeader title="Time Taken" width="90px" />,
+    name: <CustomHeader title="Time Taken" width="" />,
     selector: (row) => `${row.timeTaken} hrs`,
   },
   {
-    name: <CustomHeader title="Status" width="90px" />,
+    name: <CustomHeader title="Status" width="" />,
     selector: (row) => `${row.status}`,
   },
   {
-    name: <CustomHeader title="Action" width="90px" />,
+    name: <CustomHeader title="Action" width="" />,
     cell: (row) => (
       <div
         onClick={() => handleViewMap(row)}

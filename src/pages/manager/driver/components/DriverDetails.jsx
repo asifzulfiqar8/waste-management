@@ -10,7 +10,7 @@ function DriverDetails({ heading, data, columns }) {
                     {heading}
                 </h3>
                 <section className="flex items-center justify-between ">
-                    <button className="text-xs md:text-base text-[#7E7E7E] border p-1 rounded-md">
+                    <button className="text-xs md:text-base text-[#7E7E7E] border p-1 px-3 rounded-md">
                         See all
                     </button>
                 </section>

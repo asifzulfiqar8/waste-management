@@ -35,7 +35,7 @@ const FuelCard = ({ fuelData }) => (
             <div key={index} className="flex flex-col space-y-2 items-center">
                 <img src={item.image} alt={item.text || "Fuel"} />
                 <div>{item.text}</div>
-                <div className="h-2 w-full bg-gray-200 rounded-md overflow-hidden">
+                <div className="h-[3px] w-full bg-gray-200 rounded-md overflow-hidden">
                     <div
                         className="h-full"
                         style={{ width: `${item.percentage}%`, backgroundColor: item.lineColor }}

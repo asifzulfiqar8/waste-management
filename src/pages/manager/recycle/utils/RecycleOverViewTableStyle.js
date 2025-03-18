@@ -24,8 +24,9 @@ const RecycleOverViewTableStyle = {
       style: {
         color: "#292D32",
         fontSize: "12px",
-        // background: "red"
-        // borderRadius: "6px",
+        textAlign: 'center',
+        itemAlign: 'center',
+        justifyContent: 'center'
 
       },
     },

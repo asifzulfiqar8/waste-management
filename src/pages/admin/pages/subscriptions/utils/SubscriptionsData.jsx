@@ -38,39 +38,39 @@ const handleViewMap = (row) => {
 
 const subscriptionDataColumns = [
   {
-    name: <CustomHeader title="User Name" width="90px" />,
+    name: <CustomHeader title="User Name" width="" />,
     selector: (row) => row.username,
   },
   {
-    name: <CustomHeader title="Email" width="90px" />,
+    name: <CustomHeader title="Email" width="" />,
     selector: (row) => row.email,
   },
   {
-    name: <CustomHeader title="Subscription Plan" width="90px" />,
+    name: <CustomHeader title="Subscription Plan" width="" />,
     selector: (row) => row.subscriptionPlan,
   },
   {
-    name: <CustomHeader title="Activation Date" width="90px" />,
+    name: <CustomHeader title="Activation Date" width="" />,
     selector: (row) => `${row.activationDate}`,
   },
   {
-    name: <CustomHeader title="Expiry Date" width="90px" />,
+    name: <CustomHeader title="Expiry Date" width="" />,
     selector: (row) => `${row.expiryDate}`,
   },
   {
-    name: <CustomHeader title="Status" width="90px" />,
+    name: <CustomHeader title="Status" width="" />,
     selector: (row) => `${row.status}`,
   },
   {
-    name: <CustomHeader title="Payment Method" width="90px" />,
+    name: <CustomHeader title="Payment Method" width="" />,
     selector: (row) => `${row.paymentMethod}`,
   },
   {
-    name: <CustomHeader title="Total Amount" width="90px" />,
+    name: <CustomHeader title="Total Amount" width="" />,
     selector: (row) => `$${row.totalAmount} `,
   },
   {
-    name: <CustomHeader title="Action" width="90px" />,
+    name: <CustomHeader title="Action" width="" />,
     cell: (row) => (
       <section
         onClick={() => handleViewMap(row)}

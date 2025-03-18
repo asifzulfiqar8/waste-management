@@ -8,7 +8,7 @@ const Input = ({ startIcon, label, icon, type = "text", ...rest }) => {
         </p>
       )}
       <div
-        className={`w-full flex gap-2 justify-between items-center py-2 px-3 rounded-xl border-[1.5px] border-[#CBCAD7] text-[#686677] h-[50px]`}
+        className={`w-full flex gap-2 justify-between items-center py-2 px-3 rounded-xl border-[1.5px]  text-[#686677] h-[50px]`}
       >
         <div className="flex items-center w-full">
           {startIcon && <span>{startIcon}</span>}

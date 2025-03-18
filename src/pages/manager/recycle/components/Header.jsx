@@ -1,5 +1,5 @@
 import React from 'react';
-import { recycleRatesData, wasteCardsData } from '../utils/recycle';
+import { recycleRatesData, wasteCardsData } from '../utils/Recycle';
 
 // Reusable component for the waste cards
 const WasteCard = ({ title, subtitles, value }) => (
@@ -18,7 +18,7 @@ const WasteCard = ({ title, subtitles, value }) => (
 
 // Reusable component for the recycle rate card
 const RecycleRateCard = ({ rates }) => (
-    <div className="flex flex-col items-center justify-between p-2 bg-transparent border border-[#e7e7e7] rounded-[10px] h-[122px] w-full ">
+    <div className="flex flex-col items-center justify-between p-3 bg-transparent border border-[#e7e7e7] rounded-[10px] h-[122px] w-full ">
         {rates.map((item, index) => (
             <section key={index} className="flex justify-between text-[#737A87] w-full">
                 <div className="text-xs font-normal">{item.label}</div>

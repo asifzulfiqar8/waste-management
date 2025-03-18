@@ -39,53 +39,53 @@ const CustomHeader = ({ title, width }) => (
 const wastDataColumns = [
 
   {
-    name: <CustomHeader title="Date" width="90px" />,
+    name: <CustomHeader title="Date" width="" />,
     selector: (row) => row.date,
   },
   {
-    name: <CustomHeader title="Organic Waste" width="90px" />,
+    name: <CustomHeader title="Organic Waste" width="" />,
     selector: (row) => row.organicWaste,
 
   },
   {
-    name: <CustomHeader title="Hazardous Waste" width="90px" />,
+    name: <CustomHeader title="Hazardous Waste" width="" />,
 
     selector: (row) => `${row.hazardousWaste}kg`,
   },
   
   {
-    name: <CustomHeader title="Plastic Wast" width="90px" />,
+    name: <CustomHeader title="Plastic Wast" width="" />,
 
     selector: (row) => `${row.plasticWast}kg`,
   },
   {
-    name: <CustomHeader title="Metal Wast" width="90px" />,
+    name: <CustomHeader title="Metal Wast" width="" />,
 
     selector: (row) => `${row.metalWast}kg`,
   },
   {
-    name: <CustomHeader title="Paper Wast" width="90px" />,
+    name: <CustomHeader title="Paper Wast" width="" />,
 
     selector: (row) => `${row.paperWast}kg`,
   },
   {
-    name: <CustomHeader title="Total Collected" width="90px" />,
+    name: <CustomHeader title="Total Collected" width="" />,
 
     selector: (row) => `${row.totalCollected}kg`,
   },
   {
-    name: <CustomHeader title="Recycled" width="90px" />,
+    name: <CustomHeader title="Recycled" width="" />,
 
     selector: (row) => `${row.recycled}kg`,
   },
   
   {
-    name: <CustomHeader title="Composted" width="90px" />,
+    name: <CustomHeader title="Composted" width="" />,
 
     selector: (row) => `${row.composted}%`,
   },
   {
-    name: <CustomHeader title="Wast Sent To Landfill" width="90px" />,
+    name: <CustomHeader title="Wast Sent To Landfill" width="" />,
 
     selector: (row) => `${row.wastSentToLandfill}`,
   },

@@ -10,7 +10,6 @@ const dailyData = [
     { name: "S", value: 4 },
     { name: "S", value: 2 }
 ];
-
 // Transform the data to include active and remaining counts
 const transformedData = dailyData.map(item => ({
     name: item.name,
@@ -20,9 +19,9 @@ const transformedData = dailyData.map(item => ({
 
 function BinEmptiedGraph() {
     return (
-        <div className="flex flex-col bg-white rounded-lg shadow-lg p-1 w-full md:p-2 border">
+        <div className="flex flex-col bg-white rounded-lg shadow-lg p-1 w-full md:p-3 border">
             <h6 className="text-base font-semibold mb-4 text-[#242731]">Bin Emptied per Hour</h6>
-            <ResponsiveContainer width="100%" height={200}>
+            <ResponsiveContainer width="100%" height="100%">
                 <ComposedChart
                     data={transformedData}
                     margin={{ top: 0, right: 10, left: -30, bottom: 0 }}

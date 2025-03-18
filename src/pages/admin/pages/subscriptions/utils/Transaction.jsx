@@ -38,42 +38,42 @@ const handleViewMap = (row) => {
 
 const transactionDataColumns = [
     {
-        name: <CustomHeader title="Transaction ID" width="90px" />,
+        name: <CustomHeader title="Transaction ID" width="" />,
         selector: (row) => `${row.transactionId} `,
     },
     {
-        name: <CustomHeader title="User Name" width="90px" />,
+        name: <CustomHeader title="User Name" width="" />,
         selector: (row) => row.username,
     },
     {
-        name: <CustomHeader title="Email" width="90px" />,
+        name: <CustomHeader title="Email" width="" />,
         selector: (row) => row.email,
     },
     {
-        name: <CustomHeader title="Transaction Date" width="90px" />,
+        name: <CustomHeader title="Transaction Date" width="" />,
         selector: (row) => `${row.transactionDate}`,
     },
     {
-        name: <CustomHeader title="Amount" width="90px" />,
+        name: <CustomHeader title="Amount" width="" />,
         selector: (row) => `$${row.amount}`,
     },
     {
-        name: <CustomHeader title="Payment Method" width="90px" />,
+        name: <CustomHeader title="Payment Method" width="" />,
         selector: (row) => `${row.paymentMethod}`,
     },
     {
-        name: <CustomHeader title="Subscription Plan" width="90px" />,
+        name: <CustomHeader title="Subscription Plan" width="" />,
         selector: (row) => row.subscriptionPlan,
     },
 
     {
-        name: <CustomHeader title="Status" width="90px" />,
+        name: <CustomHeader title="Status" width="" />,
         selector: (row) => `${row.status}`,
     },
 
 
     {
-        name: <CustomHeader title="Action" width="90px" />,
+        name: <CustomHeader title="Action" width="" />,
         cell: (row) => (
             <section
                 onClick={() => handleViewMap(row)}

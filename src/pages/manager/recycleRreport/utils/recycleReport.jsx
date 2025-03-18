@@ -35,54 +35,54 @@ const CustomHeader = ({ title, width }) => (
 const recycleDataColumns = [
 
   {
-    name: <CustomHeader title="Last Recycled Date" width="90px" />,
+    name: <CustomHeader title="Last Recycled Date" width="" />,
     selector: (row) => row.lastRecycledDate,
     // width: "50px",
     // wrap: true, // Enables wrapping in cell content
     // center: true, // Centers the cell content
   },
   {
-    name: <CustomHeader title="Metal" width="90px" />,
+    name: <CustomHeader title="Metal" width="" />,
 
     selector: (row) => `${row.metal}kg`,
   },
   {
-    name: <CustomHeader title="Wood" width="90px" />,
+    name: <CustomHeader title="Wood" width="" />,
 
     selector: (row) => `${row.wood}kg`,
   },
   {
-    name: <CustomHeader title="Paper" width="90px" />,
+    name: <CustomHeader title="Paper" width="" />,
 
     selector: (row) => `${row.paper}kg`,
   },
   {
-    name: <CustomHeader title="Plastic" width="90px" />,
+    name: <CustomHeader title="Plastic" width="" />,
 
     selector: (row) => `${row.plastic}kg`,
   },
   {
-    name: <CustomHeader title="Last Active Location" width="90px" />,
+    name: <CustomHeader title="Last Active Location" width="" />,
 
     selector: (row) => `${row.liquid}kg`,
   },
   {
-    name: <CustomHeader title="Total Collected" width="90px" />,
+    name: <CustomHeader title="Total Collected" width="" />,
 
     selector: (row) => `${row.totalCollected}kg`,
   },
   {
-    name: <CustomHeader title="Recycled" width="90px" />,
+    name: <CustomHeader title="Recycled" width="" />,
 
     selector: (row) => `${row.recycled}kg`,
   },
   {
-    name: <CustomHeader title="Recycled Efficiency" width="90px" />,
+    name: <CustomHeader title="Recycled Efficiency" width="" />,
 
     selector: (row) => `${row.recycledEfficiency}%`,
   },
   {
-    name: <CustomHeader title="Wast Sent To Landfill" width="90px" />,
+    name: <CustomHeader title="Wast Sent To Landfill" width="" />,
 
     selector: (row) => `${row.wastSentToLandfill}`,
   },

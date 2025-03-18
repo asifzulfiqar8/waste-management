@@ -60,7 +60,7 @@ function UserCard({
     email.length > maxEmailLength ? `${email.substring(0, maxEmailLength)}...` : email;
 
   return (
-    <section className="rounded-2xl flex flex-col relative h-[320px] shadow-lg border">
+    <section className="rounded-lg flex flex-col relative h-[320px] shadow-lg border">
       {/* Header Section */}
       <div className="flex flex-col items-center h-full justify-center">
         <div>
@@ -106,7 +106,7 @@ function UserCard({
           </DetailItem>
         </div>
         <div className="flex h-full items-center justify-center">
-          <SmallButton onClick={openModal}>View Details</SmallButton>
+          <SmallButton className='!px-2 text-white' onClick={openModal}>View Details</SmallButton>
         </div>
       </div>
     </section>

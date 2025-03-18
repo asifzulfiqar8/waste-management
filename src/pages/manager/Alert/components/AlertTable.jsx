@@ -146,11 +146,11 @@ const AlertTable = () => {
                 <div className="flex">
                     <FaRegEdit
                         onClick={() => handleEdit(row)}
-                        className="cursor-pointer text-lg mr-2 text-blue-500 hover:text-blue-600"
+                        className="cursor-pointer text-lg mr-2 text-[#4C4C4CE5]"
                     />
                     <MdDeleteOutline
                         onClick={() => openDeleteModal(row)}
-                        className="cursor-pointer text-xl text-red-500 hover:text-red-600"
+                        className="cursor-pointer text-xl text-[#BA2222CC]"
                     />
                 </div>
             ),
@@ -163,6 +163,7 @@ const AlertTable = () => {
                 customStyles={AlertListTableStyle}
                 columns={columns}
                 data={data}
+                pagination={true}
             />
             {isModalOpen && currentAlert && (
                 <Modal title={"Edit Alert"} onClose={handleCancel}>

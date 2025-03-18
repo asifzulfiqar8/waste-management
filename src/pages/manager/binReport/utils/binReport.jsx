@@ -241,44 +241,44 @@ const CustomHeader = ({ title, width }) => (
 
 const binDataColumns = [
   {
-    name: <CustomHeader title="Bin ID" width="150px" />,
+    name: <CustomHeader title="Bin ID" width="" />,
     selector: (row) => row.id,
     // width: "50px",
     // wrap: true, // Enables wrapping in cell content
     // center: true, // Centers the cell content
   },
   {
-    name: <CustomHeader title="Location" width="150px" />,
+    name: <CustomHeader title="Location" width="" />,
 
     selector: (row) => row.location,
   },
   {
-    name: <CustomHeader title="Garbage Fill level (%)" width="100px" />,
+    name: <CustomHeader title="Garbage Fill level (%)" width="" />,
 
     selector: (row) => `${row.garbageFill}%`,
   },
   {
-    name: <CustomHeader title="Garbage Collected (kg)" width="100px" />,
+    name: <CustomHeader title="Garbage Collected (kg)" width="" />,
 
     selector: (row) => `${row.garbageCollected}kg`,
   },
   {
-    name: <CustomHeader title="Current Status" width="150px" />,
+    name: <CustomHeader title="Current Status" width="" />,
 
     selector: (row) => row.currentStatus,
   },
   {
-    name: <CustomHeader title="Last Collection Date" width="150px" />,
+    name: <CustomHeader title="Last Collection Date" width="" />,
 
     selector: (row) => row.lastCollectionDate,
   },
   {
-    name: <CustomHeader title="Next Collection Prediction" width="150px" />,
+    name: <CustomHeader title="Next Collection Prediction" width="" />,
 
     selector: (row) => row.nextCollectionPrediction,
   },
   {
-    name: <CustomHeader title="Alert" width="150px" />,
+    name: <CustomHeader title="Alert" width="" />,
 
     selector: (row) => row.alert,
   },

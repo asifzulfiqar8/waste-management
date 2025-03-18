@@ -37,7 +37,7 @@ function TruckDetail() {
                     <TravelOverView />
                 </section>
             </section>
-            <section className="grid overflow-auto h-full lg:h-[700px]  bg-white rounded-lg shadow-lg p-1 md:p-2 border mt-4">
+            <section className="grid overflow-auto h-full lg:h-[700px]  bg-white rounded-lg shadow-lg p-1 md:p-5 border mt-4">
                 <TruckWasteDetails
                     columns={TruckWasteDataColumns}
                     data={TruckWasteData}

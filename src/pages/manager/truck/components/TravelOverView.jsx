@@ -145,7 +145,9 @@ const TravelOverView = () => {
 
                 {/* Responsive chart container */}
                 <ResponsiveContainer>
-                    <LineChart data={currentData} margin={{ top: 20, right: 30, left: 0, bottom: 20 }}>
+                    <LineChart data={currentData}
+                        margin={{ top: 10, right: 10, left: -30, bottom: 0 }}
+                    >
                         <CartesianGrid strokeDasharray="3 3" />
                         <XAxis dataKey="day" />
                         <YAxis domain={[0, 100]} />

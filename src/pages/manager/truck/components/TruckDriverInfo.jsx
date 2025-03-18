@@ -48,8 +48,8 @@ const TruckDriverInfo = ({ driverData }) => {
     const { image, details } = driverData;
 
     return (
-        <section className="flex flex-col bg-white rounded-lg shadow-lg p-1 w-full md:p-2 border ">
-            <header className="text-lg font-bold ">Driver Details</header>
+        <section className="flex flex-col bg-white rounded-lg shadow-lg p-1 w-full md:p-3 border ">
+            <header className="text-lg font-bold p-3 ">Driver Details</header>
             <section className="flex gap-2 w-full">
                 <section className='w-ful '>
                     <img

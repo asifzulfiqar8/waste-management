@@ -191,7 +191,7 @@ const EditableTaskCell = ({ row, onUpdateTask }) => {
   return (
     <div style={{ position: "relative" }}>
       <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-        <span>{taskValue}</span>
+        <span className="w-20">{taskValue}</span>
         <FaEllipsisV onClick={handleIconClick} style={{ cursor: "pointer", marginLeft: 8 }} />
       </div>
       {showMenu && (
@@ -257,7 +257,7 @@ export const DriverDataColumns = [
   {
     name: "Attendance",
     cell: (row) => (
-      <div style={{ color: row.Attendance.toLowerCase() === "leave" ? "red" : "inherit" }}>
+      <div className="flex h-full w-full items-center justify-center" style={{ background: row.Attendance.toLowerCase() === "leave" ? "#FAB1B1" : "inherit" }}>
         {row.Attendance}
       </div>
     ),

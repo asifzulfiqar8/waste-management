@@ -81,45 +81,70 @@ const recycleData = [
 
 ];
 
+const CustomHeader = ({ title, width }) => (
+    <div
+      style={{
+        width: width,
+        overflow: "hidden",
+        // whiteSpace: "normal",
+        // wordBreak: "break-word",
+        // textAlign: "center",
+        // display: "block", // ensures block-level rendering so width is applied
+      }}
+    >
+      {title}
+    </div>
+  );
+
 const recycleDataColumns = [
     {
-        name: "Last Recycled Date",
+        name: <CustomHeader title="Last Recycled Date" width="" />,
+        // name: "Last Recycled Date",
         selector: (row) => row?.date,
     },
     {
-        name: "Metal",
+         name: <CustomHeader title="Metal" width="" />,
+        // name: "Metal",
         selector: (row) => row?.metal,
     },
     {
-        name: "Wood",
+         name: <CustomHeader title="Wood" width="" />,
+        // name: "Wood",
         selector: (row) => row?.wood,
     },
     {
-        name: "Paper",
+         name: <CustomHeader title="Paper" width="" />,
+        // name: "Paper",
         selector: (row) => row?.paper,
     },
     {
-        name: "Plastic",
+         name: <CustomHeader title="Plastic" width="" />,
+        // name: "Plastic",
         selector: (row) => row?.plastic,
     },
     {
-        name: "Liquid",
+         name: <CustomHeader title="Liquid" width="" />,
+        // name: "Liquid",
         selector: (row) => row?.liquid,
     },
     {
-        name: "Total Collected",
+         name: <CustomHeader title="Total Collected" width="" />,
+        // name: "Total Collected",
         selector: (row) => row?.collected,
     },
     {
-        name: "Recycled",
+         name: <CustomHeader title="Recycled" width="" />,
+        // name: "Recycled",
         selector: (row) => row?.recycled,
     },
     {
-        name: "Recycling Efficiency",
+         name: <CustomHeader title="Recycling Efficiency" width="" />,
+        // name: "Recycling Efficiency",
         selector: (row) => row?.efficiency,
     },
     {
-        name: "Waste Sent to Landfill",
+         name: <CustomHeader title="Waste Sent to Landfill" width="" />,
+        // name: "Waste Sent to Landfill",
         selector: (row) => row?.landfill,
     },
 ];

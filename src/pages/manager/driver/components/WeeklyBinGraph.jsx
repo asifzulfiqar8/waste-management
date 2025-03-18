@@ -86,12 +86,12 @@ function WeeklyBinGraph() {
     };
 
     return (
-        <div className="flex flex-col bg-white rounded-lg shadow-lg p-2 w-full md:p-4 border">
+        <div className="flex flex-col bg-white rounded-lg shadow-lg p-2 w-full md:p-3 border">
             {/* Dropdown for selecting view */}
             <div className="flex items-center justify-between mb-4">
                 <h6 className="text-base font-semibold text-[#242731]">Bin Emptied</h6>
                 <select
-                    className="border p-1 rounded"
+                    className="border p-1 px-3 rounded"
                     value={view}
                     onChange={(e) => setView(e.target.value)}
                 >
@@ -100,7 +100,7 @@ function WeeklyBinGraph() {
                     <option value="monthly">Monthly</option>
                 </select>
             </div>
-            <ResponsiveContainer width="100%" height={200}>
+            <ResponsiveContainer width="100%" height='100%'>
                 <ComposedChart
                     data={transformedData}
                     margin={{ top: 10, right: 10, left: 10, bottom: 10 }}

@@ -4,6 +4,7 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { routeData, routeDataColumns } from "./utils/RouteData";
 import routeTableStyle from "./utils/routeTableStyle";
+import { FaCalendarAlt } from "react-icons/fa";
 
 function DriverRoute() {
   const [dateRange, setDateRange] = useState([null, null]);
@@ -12,17 +13,22 @@ function DriverRoute() {
 
   return (
     <div>
-      <section className="flex justify-between items-center">
-        <section className="text-base font-semibold">Report</section>
-        <DatePicker
-          className="border p-2 rounded-lg hover"
-          selectsRange
-          startDate={startDate}
-          endDate={endDate}
-          onChange={handleDateChange}
-          isClearable
-          placeholderText="Select start and end date"
-        />
+      <section className='flex justify-between items-center'>
+        <section className='text-base font-semibold'>
+          Report
+        </section>
+        <div className='border p-2 rounded-lg flex  gap-2 items-center'>
+            <span><FaCalendarAlt /></span>
+            <DatePicker
+              className=" outline-none "
+              selectsRange
+              startDate={startDate}
+              endDate={endDate}
+              onChange={handleDateChange}
+              isClearable
+              placeholderText="Select start and end date"
+            />
+          </div>
       </section>
       <section>
         <DataTable

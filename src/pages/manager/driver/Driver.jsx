@@ -12,7 +12,7 @@ const Driver = () => {
       <div className="bg-white rounded-lg shadow-lg p-2 md:p-4 border-[1px] mt-5">
         <ListingHeader />
         <div className="w-full h-[0.6px] bg-[#00000033] my-[18px]"></div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 max-h-[700px] overflow-y-scroll custom-scroll">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-4 max-h-[700px] overflow-y-scroll custom-scroll">
           {drivers?.map((driver, i) => (
             <DriverCard driver={driver} key={i} />
           ))}

@@ -6,7 +6,7 @@ const TruckInfo = ({ truckData }) => {
     const { image, details } = truckData;
 
     return (
-        <section className="flex flex-col bg-white rounded-lg shadow-lg p-1 md:p-2 w-full border-[1px] ">
+        <section className="flex flex-col bg-white rounded-lg shadow-lg p-1 md:p-3 w-full border-[1px] ">
             {/* Truck Image */}
             <section>
                 <img
@@ -16,7 +16,7 @@ const TruckInfo = ({ truckData }) => {
                 />
             </section>
             {/* Truck Details */}
-            <section className="flex items-center justify-between">
+            <section className="flex mt-3 items-center justify-between">
                 {details.map((detail, index) => (
                     <React.Fragment key={index}>
                         <section className="flex flex-col items-center">
