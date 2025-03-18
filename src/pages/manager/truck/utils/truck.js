@@ -1,15 +1,15 @@
-import IdleTruck from "../../../../assets/images/truck/IdleTruck.png";
-import InRepairTruck from "../../../../assets/images/truck/InRepairTruck.png";
-import OnRootSmallTruck from "../../../../assets/images/truck/OnRootSmallTruck.png";
-import GasPump from "../../../../assets/images/truck/GasPump.png";
-import Weight from "../../../../assets/images/truck/Weight.png";
-import Route from "../../../../assets/images/truck/Route.png";
 import BigIdleTruck from "../../../../assets/images/truck/BigIdleTruck.png";
 import BigInRepairTuck from "../../../../assets/images/truck/BigInRepairTuck.png";
 import BigOnRootTruck from "../../../../assets/images/truck/BigOnRootTruck.png";
-import HeavyMachinery from "../../../../assets/images/truck/HeavyMachinery.png"
-import Driver from "../../../../assets/images/truck/Driver.png"
-import overload from "../../../../assets/images/truck/overload.png"
+import Driver from "../../../../assets/images/truck/Driver.png";
+import GasPump from "../../../../assets/images/truck/GasPump.png";
+import HeavyMachinery from "../../../../assets/images/truck/HeavyMachinery.png";
+import IdleTruck from "../../../../assets/images/truck/IdleTruck.png";
+import InRepairTruck from "../../../../assets/images/truck/InRepairTruck.png";
+import OnRootSmallTruck from "../../../../assets/images/truck/OnRootSmallTruck.png";
+import overload from "../../../../assets/images/truck/overload.png";
+import Route from "../../../../assets/images/truck/Route.png";
+import Weight from "../../../../assets/images/truck/Weight.png";
 
 const tuckData = [
     { name: "Paper", value: 10 },
@@ -344,4 +344,4 @@ const routesData = [
 
 
 
-export { tuckData, truckListData, fuelData, trucks, truckData, driverData, violationsData, routesData };
+export { driverData, fuelData, routesData, truckData, truckListData, trucks, tuckData, violationsData };

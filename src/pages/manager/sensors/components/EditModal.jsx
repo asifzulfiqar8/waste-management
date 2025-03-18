@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Input from "../../../../components/shared/small/Input";
 import Button from "../../../../components/shared/small/Button";
+import Input from "../../../../components/shared/small/Input";
 const EditModal = ({ sensor, onSave, onCancel }) => {
     const [sensorName, setSensorName] = useState(sensor.sensorName);
     const [sensorType, setSensorType] = useState(sensor.sensorType);

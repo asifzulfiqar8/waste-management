@@ -1,14 +1,13 @@
 
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import DataTable from "react-data-table-component";
 import { FaRegEdit } from "react-icons/fa";
 import { MdDeleteOutline } from "react-icons/md";
 import Modal from "../../../../components/shared/small/Modal";
-import Button from "../../../../components/shared/small/Button";
 import { AlertListTableStyle } from "../utils/AlertListTableStyle";
 import { initialAlertData } from "../utils/alert";
-import EditModal from "./EditModal";
 import DeleteModal from "./DeleteModal";
+import EditModal from "./EditModal";
 
 const getSeverityColor = (severity) => {
     switch (severity.toLowerCase()) {

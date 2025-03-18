@@ -1,5 +1,5 @@
 import React from 'react';
-import { ComposedChart, Bar, Line, ResponsiveContainer, XAxis, YAxis } from 'recharts';
+import { Bar, ComposedChart, ResponsiveContainer, XAxis, YAxis } from 'recharts';
 
 const dailyData = [
     { name: "M", value: 8 },

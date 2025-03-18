@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import { CiSearch } from "react-icons/ci";
 import { Link } from 'react-router-dom';
-import { AddIcon } from '../../../../assets/svgs/icon';
-import Button, { SmallButton } from "../../../../components/shared/small/Button";
 import Users from '../../../../assets/images/driver/allUsers/Users.png';
-import UserCard from './components/UserCard';
+import { AddIcon } from '../../../../assets/svgs/icon';
 import Modal from '../../../../components/shared/small/Modal';
+import UserCard from './components/UserCard';
 import UserDetail from './components/UserDetail';
 
 const usersData = [
@@ -242,10 +241,10 @@ function AllUsers() {
           <UserDetail user={selectedUser} />
         </Modal>
       )}
-      <div className="bg-white rounded-lg shadow-lg p-2 md:p-4 border-[1px] mt-5">
+      <div className="bg-white rounded-lg shadow-lg  border-[1px] mt-5">
         <ListingHeader />
         <div className="w-full h-[0.6px] bg-[#00000033] my-[18px]"></div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4 max-h-[700px] overflow-y-scroll custom-scroll">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4 max-h-[700px] p-2 lg:p-4 overflow-y-scroll custom-scroll">
           {usersData.map((user) => (
             // Pass a callback that includes the current user data
             <UserCard key={user.id} {...user} openModal={() => openModal(user)} />
@@ -260,8 +259,8 @@ export default AllUsers;
 
 const ListingHeader = () => {
   return (
-    <div className="flex flex-wrap justify-between gap-4">
-      <h6 className="text-base font-semibold text-[#060606CC]">Bins Listing</h6>
+    <div className="flex flex-wrap justify-between p-2 lg:p-4 lg:pb-0 gap-4">
+      <h6 className="text-base font-semibold text-[#060606CC]">Managers Listing</h6>
       <div className="flex items-center gap-2 bg-transparent border border-[#e7e7e7] rounded-[10px] py-2 px-4 h-[38px] w-full max-w-[322px]">
         <CiSearch fontSize={20} color="#7E7E7E" />
         <input

@@ -1,18 +1,18 @@
+import bin from "../../../assets/images/dashboard/bin-card.png";
+import driver from "../../../assets/images/dashboard/driver-card.png";
+import truck from "../../../assets/images/dashboard/truck-card.png";
+import Alerts from "./components/Alerts";
 import {
   BinsInfoContent,
   DriversInfoContent,
   TrucksInfoContent,
 } from "./components/InfoCardContent";
 import InfoCardLayout from "./components/InfoCardLayout";
-import bin from "../../../assets/images/dashboard/bin-card.png";
-import truck from "../../../assets/images/dashboard/truck-card.png";
-import driver from "../../../assets/images/dashboard/driver-card.png";
-import WasteDetailTable from "./components/WasteDetailTable";
-import Alerts from "./components/Alerts";
 import Map from "./components/Map";
-import WasteView from "./components/WasteView";
-import WasteOverViewChart from "./components/WasteOverViewChart";
 import WasteAreaChart from "./components/WasteAreaChart";
+import WasteDetailTable from "./components/WasteDetailTable";
+import WasteOverViewChart from "./components/WasteOverViewChart";
+import WasteView from "./components/WasteView";
 
 const ManagerDashboard = () => {
   return (

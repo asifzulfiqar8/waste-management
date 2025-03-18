@@ -1,7 +1,7 @@
-import { driverData } from "../utils/driver";
-import enRouteImg from "../../../../assets/images/drivers/enroute.png";
 import availableImg from "../../../../assets/images/drivers/available.png";
+import enRouteImg from "../../../../assets/images/drivers/enroute.png";
 import leaveImg from "../../../../assets/images/drivers/leave.png";
+import { driverData } from "../utils/driver";
 
 const TotalDrivers = () => {
   return (

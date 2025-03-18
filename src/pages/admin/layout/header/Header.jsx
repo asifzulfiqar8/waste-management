@@ -1,12 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
+import { HiChevronDown } from "react-icons/hi";
 import { IoChevronForwardOutline, IoLogOutOutline } from "react-icons/io5";
+import { RxHamburgerMenu } from "react-icons/rx";
 import { Link, useLocation } from "react-router-dom";
+import { RingIcon } from "../../../../assets/svgs/icon";
 import Aside from "../aside/Aside";
 import Notification from "./Notification";
-import { RxHamburgerMenu } from "react-icons/rx";
-import { HiChevronDown } from "react-icons/hi";
-import { RingIcon } from "../../../../assets/svgs/icon";
-// import { RingIcon } from "../../assets/svgs/icon";
 
 const Header = () => {
   const [isNotificationOpen, setIsNotificationOpen] = useState(false);

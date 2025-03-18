@@ -1,10 +1,8 @@
 /* eslint-disable react/prop-types */
 import {
     LgBinIcon,
-    LgDriverIcon,
-    LgTruckIcon,
+    LgTruckIcon
 } from "../../../../../assets/svgs/icon";
-//   } from "../../../../assets/svgs/icon";
 import HalfRadialChart from "../../../../../components/charts/HalfRadialChart";
 
 export const BinsInfoContent = () => {

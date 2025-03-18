@@ -1,8 +1,8 @@
 import { CiSearch } from "react-icons/ci";
-import TotalBins from "./components/TotalBins";
 import { Link } from "react-router-dom";
 import { AddIcon } from "../../../assets/svgs/icon";
 import BinCard from "./components/BinCard";
+import TotalBins from "./components/TotalBins";
 import { binCardData } from "./utils/bin";
 
 const Bin = () => {

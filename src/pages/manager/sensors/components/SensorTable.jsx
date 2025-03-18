@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import DataTable from "react-data-table-component";
-import { initialSensorData } from "../utils/sensonListTable";
-import EditModal from "./EditModal";
 import { FaRegEdit } from "react-icons/fa";
 import { MdDeleteOutline } from "react-icons/md";
 import Modal from "../../../../components/shared/small/Modal";
+import { initialSensorData } from "../utils/sensonListTable";
 import { SensorListTableStyle } from "../utils/SensorListTableStyle";
+import EditModal from "./EditModal";
 
 const SensorTable = () => {
     const [data, setData] = useState(initialSensorData);

@@ -1,8 +1,8 @@
+import { useState } from "react";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
+import { Link } from "react-router-dom";
 import Button from "../../../components/shared/small/Button";
 import Input from "../../../components/shared/small/Input";
-import { useState } from "react";
-import { Link } from "react-router-dom";
 
 
 const Login = () => {

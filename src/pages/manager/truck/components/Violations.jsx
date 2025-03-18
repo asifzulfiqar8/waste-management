@@ -2,45 +2,6 @@ import React, { useState } from 'react';
 import { IoIosArrowDown } from "react-icons/io";
 import { violationsData } from '../utils/truck';
 
-// Example data for five violations
-// const violationsData = [
-//   {
-//     id: 1,
-//     name: 'Speeding',
-//     time: '30min ago',
-//     image: 'https://via.placeholder.com/30', // Replace with your image source
-//     details: 'Exceeded speed limit by 20mph.',
-//   },
-//   {
-//     id: 2,
-//     name: 'Illegal Parking',
-//     time: '1hr ago',
-//     image: 'https://via.placeholder.com/30', // Replace with your image source
-//     details: 'Parked in a no-parking zone.',
-//   },
-//   {
-//     id: 3,
-//     name: 'Red Light Violation',
-//     time: '2hr ago',
-//     image: 'https://via.placeholder.com/30', // Replace with your image source
-//     details: 'Ran a red light at Main St.',
-//   },
-//   {
-//     id: 4,
-//     name: 'Seatbelt Violation',
-//     time: '3hr ago',
-//     image: 'https://via.placeholder.com/30', // Replace with your image source
-//     details: 'Driver not wearing a seatbelt.',
-//   },
-//   {
-//     id: 5,
-//     name: 'Overloading',
-//     time: '4hr ago',
-//     image: 'https://via.placeholder.com/30', // Replace with your image source
-//     details: 'Truck overloaded by 500kg.',
-//   },
-// ];
-
 const ViolationsAccordion = () => {
     // Track which violation is open. Only one can be open at a time.
     const [openViolationId, setOpenViolationId] = useState(null);

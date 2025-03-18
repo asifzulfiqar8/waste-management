@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 import { CiSearch } from "react-icons/ci";
 import { AddIcon } from "../../../assets/svgs/icon";
 
-import TotalTrucks from './components/TotalTrucks'
 import { Link } from 'react-router-dom';
+import TotalTrucks from './components/TotalTrucks';
 import TruckCard from './components/TruckCard';
 import { trucks } from './utils/truck';
 

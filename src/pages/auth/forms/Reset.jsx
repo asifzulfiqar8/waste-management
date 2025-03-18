@@ -1,9 +1,9 @@
+import { useState } from "react";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
+import { CiLock } from "react-icons/ci";
+import { Link } from "react-router-dom";
 import Button from "../../../components/shared/small/Button";
 import Input from "../../../components/shared/small/Input";
-import { useState } from "react";
-import { Link } from "react-router-dom";
-import { CiLock } from "react-icons/ci";
 
 const Reset = () => {
   const [seePass, setSeePass] = useState(false);

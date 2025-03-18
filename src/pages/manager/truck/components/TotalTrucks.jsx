@@ -1,12 +1,12 @@
-import React from 'react'
-import PieChartComponent from '../../../../components/charts/PieChartComponent'
-import TruckImg from '../../../../assets/images/truck/TruckImg.png'
+import React from 'react';
+import TruckImg from '../../../../assets/images/truck/TruckImg.png';
+import PieChartComponent from '../../../../components/charts/PieChartComponent';
 import { truckListData, tuckData } from "../utils/truck";
 
 const COLORS = ["#E30613", "#FBBF00", "#393B3E"];
 function TotalTrucks() {
     return (
-        <section className="bg-white rounded-lg shadow-lg p-2 md:p-4 border-[1px] flex flex-wrap justify-between gap-5 lg:gap-10">
+        <section className="bg-white rounded-lg shadow-lg p-2 md:p-4 border-[1px] items-center flex flex-wrap justify-between gap-5 lg:gap-10">
             <div>
                 <h6 className="text-base md:text-xl font-semibold text-[#060606CC]">
                     Total Truck

@@ -1,6 +1,5 @@
-import { Link } from "react-router-dom";
-import binImg from "../../../../assets/images/bin/bin-img.png";
 import { IoLocation } from "react-icons/io5";
+import { Link } from "react-router-dom";
 import PieChartComponent from "../../../../components/charts/PieChartComponent";
 
 const COLORS = ["#7FD2CF", "#F49324", "#BA2222"];

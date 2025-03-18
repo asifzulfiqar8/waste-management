@@ -1,17 +1,16 @@
-import React from 'react'
-import InfoCardLayout from './components/InfoCardLayout'
-import { BinsInfoContent, PetrolInfoContent, TrucksInfoContent } from './components/BinsInfoContent'
-// import bin from "../../../assets/images/dashboard/bin-card.png";
-import bin from "../../../../assets/images/dashboard/bin-card.png";
-import truck from "../../../../assets/images/dashboard/truck-card.png";
-import Petrol from "../../../../assets/images/dashboard/Petrol.png";
-import WasteOverViewChart from './components/WasteOverViewChart';
-import Map from './components/Map';
-import Alerts from './components/Alerts';
-import WeeklyBinGraph from './components/WeeklyBinGraph';
-import { binData, binDataColumns} from './utils/DriverDashboard';
+import React from 'react';
 import DataTable from 'react-data-table-component';
+import bin from "../../../../assets/images/dashboard/bin-card.png";
+import Petrol from "../../../../assets/images/dashboard/Petrol.png";
+import truck from "../../../../assets/images/dashboard/truck-card.png";
+import Alerts from './components/Alerts';
+import { BinsInfoContent, PetrolInfoContent, TrucksInfoContent } from './components/BinsInfoContent';
+import InfoCardLayout from './components/InfoCardLayout';
+import Map from './components/Map';
+import WasteOverViewChart from './components/WasteOverViewChart';
+import WeeklyBinGraph from './components/WeeklyBinGraph';
 import binTableStyle from './utils/binTableStyle';
+import { binData, binDataColumns } from './utils/DriverDashboard';
 
 
 function DriverDashboard() {

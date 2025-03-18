@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
-import Input from '../../../../components/shared/small/Input';
+import React, { useState } from 'react';
 import Dropdown from '../../../../components/shared/small/Dropdown';
+import Input from '../../../../components/shared/small/Input';
 import CustomMap from './CustomMap';
 
 function Confirmation({ currentStep, handleNext, handlePrevious, handleCancel }) {

@@ -1,6 +1,6 @@
-import { sensorData } from "../utils/sensor";
 import activeSensor from "../../../../assets/images/sensor/active-sensor.png";
 import offlineSensor from "../../../../assets/images/sensor/offline-sensor.png";
+import { sensorData } from "../utils/sensor";
 
 const TotalSensor = () => {
   return (

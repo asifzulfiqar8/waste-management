@@ -1,6 +1,6 @@
 import React from 'react'
-import Header from './components/Header'
 import Database from './components/Database'
+import Header from './components/Header'
 
 function Configuration() {
   return (

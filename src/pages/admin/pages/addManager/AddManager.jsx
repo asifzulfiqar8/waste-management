@@ -1,9 +1,6 @@
 import { useState } from "react";
-import GeneralInfo from "./components/ManagerInfo";
-import MapInfo from "./components/CompanyDetails";
-import Confirmation from "./components/SubscriptionDetails";
-import ManagerInfo from "./components/ManagerInfo";
 import CompanyDetails from "./components/CompanyDetails";
+import ManagerInfo from "./components/ManagerInfo";
 import SubscriptionDetails from "./components/SubscriptionDetails";
 
 const AddManager = () => {

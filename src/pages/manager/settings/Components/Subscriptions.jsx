@@ -1,7 +1,7 @@
-import React from 'react'
-import SubscriptionImg from '../../../../assets/images/settings/Subscription.png'
+import React from 'react';
 import { RxCheck } from "react-icons/rx";
-import Button, { SmallButton } from '../../../../components/shared/small/Button';
+import SubscriptionImg from '../../../../assets/images/settings/Subscription.png';
+import { SmallButton } from '../../../../components/shared/small/Button';
 
 const features = [
     "All features from the Standard Plan",

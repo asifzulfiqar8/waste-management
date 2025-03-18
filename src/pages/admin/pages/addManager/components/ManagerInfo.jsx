@@ -1,7 +1,5 @@
-import React, { useState, useCallback } from 'react';
+import React, { useCallback, useState } from 'react';
 import Input from '../../../../../components/shared/small/Input';
-import { IoClose } from 'react-icons/io5';
-import { FiPlusCircle } from 'react-icons/fi';
 
 const ManagerInfo = ({ handleNext, handlePrevious, handleCancel, currentStep }) => {
     // State for form data

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import Input from '../../../../../components/shared/small/Input';
 import Dropdown from '../../../../../components/shared/small/Dropdown';
-// import CustomMap from './CustomMap';
+import Input from '../../../../../components/shared/small/Input';
 
 function SubscriptionDetails({ currentStep, handleNext, handlePrevious, handleCancel }) {
   const [formData, setFormData] = useState({
@@ -74,7 +73,7 @@ function SubscriptionDetails({ currentStep, handleNext, handlePrevious, handleCa
       <section className="flex pt-4 w-full justify-center">
         {currentStep > 1 && (
           <button
-            className="px-4 py-2 border border-primary text-primary rounded-lg"
+            className="px-4 py-1 border border-primary text-primary rounded-lg"
             onClick={handlePrevious}
           >
             Previous
@@ -82,14 +81,14 @@ function SubscriptionDetails({ currentStep, handleNext, handlePrevious, handleCa
         )}
         {currentStep < 3 ? (
           <button
-            className="px-4 py-2 bg-primary text-white rounded-lg"
+            className="px-4 py-1 bg-primary text-white rounded-lg"
             onClick={handleNext}
           >
             Next
           </button>
         ) : (
           <button
-            className="px-4 py-2 ml-2 bg-primary text-white rounded-lg"
+            className="px-4 py-1 ml-2 bg-primary text-white rounded-lg"
             onClick={handleCancel}
           >
             Confirm

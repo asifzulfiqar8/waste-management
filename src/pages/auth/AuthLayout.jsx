@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import authLogo from "../../assets/images/auth/logo.png" 
+import authLogo from "../../assets/images/auth/logo.png";
 
 const AuthLayout = ({bgImg , form}) => {
   return (

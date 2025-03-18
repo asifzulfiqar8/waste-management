@@ -1,5 +1,5 @@
-import PieChartComponent from "../../../../components/charts/PieChartComponent";
 import BinImg from "../../../../assets/images/bin/bin.png";
+import PieChartComponent from "../../../../components/charts/PieChartComponent";
 import { binData, binListData } from "../utils/bin";
 
 const COLORS = ["#E30613", "#FBBF00", "#393B3E"];

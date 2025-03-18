@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Input from "../../../../components/shared/small/Input";
 import Button from "../../../../components/shared/small/Button";
+import Input from "../../../../components/shared/small/Input";
 
 const EditModal = ({ alert, onSave, onCancel }) => {
   // Initialize state with fields matching your alert object

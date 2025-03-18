@@ -1,9 +1,7 @@
-import React, { useState } from 'react'
-import { IoClose } from "react-icons/io5";
-import { FiPlusCircle } from "react-icons/fi";
-import Input from '../../../components/shared/small/Input';
+import React, { useState } from 'react';
+import { SmallButton } from '../../../components/shared/small/Button';
 import Dropdown from '../../../components/shared/small/Dropdown';
-import Button, { SmallButton } from '../../../components/shared/small/Button';
+import Input from '../../../components/shared/small/Input';
 function AddSensor() {
     const [images, setImages] = useState([]);
     const [isDragging, setIsDragging] = useState(false);

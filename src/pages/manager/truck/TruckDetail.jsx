@@ -1,5 +1,4 @@
 import React from 'react'
-// import PickUp from '../components/PickUp'
 import PickUp from './components/PickUp'
 import TravelOverView from './components/TravelOverView'
 import TruckDriverInfo from './components/TruckDriverInfo'

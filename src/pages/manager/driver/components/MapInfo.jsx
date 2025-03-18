@@ -1,6 +1,6 @@
 import React, { useState } from "react";
+import { useMap } from "react-leaflet";
 import Input from "../../../../components/shared/small/Input";
-import { MapContainer, Marker, Popup, TileLayer, useMap } from "react-leaflet";
 import CustomMap from "./CustomMap";
 
 // Custom component to update the map position dynamically

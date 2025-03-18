@@ -1,9 +1,8 @@
-import React from "react";
-import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
+import React from "react";
+import { MapContainer, Marker, Popup, TileLayer, useMap } from "react-leaflet";
 import Button from "../../../../components/shared/small/Button";
-import { FiMapPin } from "react-icons/fi";
 
 // Custom icon for the marker
 const customIcon = L.icon({

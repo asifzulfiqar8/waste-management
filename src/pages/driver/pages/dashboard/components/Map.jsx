@@ -1,27 +1,25 @@
 /* eslint-disable react/prop-types */
+import L from "leaflet";
+import "leaflet/dist/leaflet.css";
 import { useState } from "react";
 import {
   MapContainer,
-  TileLayer,
   Marker,
+  Polyline,
   Popup,
-  Polyline
+  TileLayer
 } from "react-leaflet";
-import "leaflet/dist/leaflet.css";
-import L from "leaflet";
 
+import emptyBin from "../../../../../assets/images/dashboard/map-green-bin.png";
 import fullBin from "../../../../../assets/images/dashboard/map-red-bin.png";
 import halfBin from "../../../../../assets/images/dashboard/map-yellow-bin.png";
-import emptyBin from "../../../../../assets/images/dashboard/map-green-bin.png";
 
-import redTruck from "../../../../../assets/images/dashboard/map-red-truck.png";
-import yellowTruck from "../../../../../assets/images/dashboard/map-yellow-truck.png";
 import truckIconImg from "../../../../../assets/images/dashboard/map-green-truck.png";
 
-import binBg from "../../../../../assets/images/dashboard/bins-map.png";
 import { TiMinus } from "react-icons/ti";
-import Button, { SmallButton } from "../../../../../components/shared/small/Button";
 import { useNavigate } from "react-router-dom";
+import binBg from "../../../../../assets/images/dashboard/bins-map.png";
+import Button, { SmallButton } from "../../../../../components/shared/small/Button";
 
 // Custom icons for bins
 const emptyBinIcon = L.icon({

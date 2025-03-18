@@ -1,8 +1,8 @@
-import Input from '../../../components/shared/small/Input';
-import Button from '../../../components/shared/small/Button';
-import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai';
 import { useState } from 'react';
+import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
+import Button from '../../../components/shared/small/Button';
+import Input from '../../../components/shared/small/Input';
 
 const Signup = () => {
     const [seePass, setSeePass] = useState(false);

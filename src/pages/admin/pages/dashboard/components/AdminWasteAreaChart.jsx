@@ -1,6 +1,5 @@
 import { useState } from "react";
-// import CustomAreaChart from "../../../../components/charts/AreaChart";
-import CustomAreaChart from '../../../../../components/charts/AreaChart'
+import CustomAreaChart from '../../../../../components/charts/AreaChart';
 // Monthly data for each chart category
 const monthlyData = {
   metal: [

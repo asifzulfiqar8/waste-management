@@ -1,7 +1,7 @@
 import React from "react";
-import Aside from '../../layout/aside/Aside'
-import Header from '../../layout/header/Header'
-import Main from '../../layout/Main'
+import Aside from '../../layout/aside/Aside';
+import Header from '../../layout/header/Header';
+import Main from '../../layout/Main';
 
 const Manager = () => {
   return (

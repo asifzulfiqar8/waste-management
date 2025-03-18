@@ -1,15 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import DataTable from 'react-data-table-component';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-import DataTable from 'react-data-table-component';
-// import { routeData, routeDataColumns } from './utils/routeData';
-// import routeTableStyle from './utils/routeTableStyle'
-// import { subscriptionData, subscriptionDataColumns } from '../utils/SubscriptionsData';
-// import subscriptionTableStyle from '../utils/subscriptionTableStyle';
-import transactionTable from '../utils/transactionTable';
-import { transactionData, transactionDataColumns } from '../utils/Transaction';
 import { CiSearch } from "react-icons/ci";
 import { FaCalendarAlt } from "react-icons/fa";
+import { transactionData, transactionDataColumns } from '../utils/Transaction';
+import transactionTable from '../utils/transactionTable';
 
 function TransactionsManagement() {
 

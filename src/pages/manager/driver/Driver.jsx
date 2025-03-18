@@ -1,8 +1,8 @@
-import { Link } from "react-router-dom";
-import TotalDrivers from "./components/TotalDrivers";
 import { CiSearch } from "react-icons/ci";
+import { Link } from "react-router-dom";
 import { AddIcon } from "../../../assets/svgs/icon";
 import DriverCard from "./components/DriverCard";
+import TotalDrivers from "./components/TotalDrivers";
 import drivers from "./utils/driver";
 
 const Driver = () => {

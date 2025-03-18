@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Input from "../../../../components/shared/small/Input";
-import Dropdown from "../../../../components/shared/small/Dropdown";
-import { IoClose } from "react-icons/io5";
 import { FiPlusCircle } from "react-icons/fi";
+import { IoClose } from "react-icons/io5";
+import Dropdown from "../../../../components/shared/small/Dropdown";
+import Input from "../../../../components/shared/small/Input";
 
 function GeneralInfo({ handleNext, currentStep }) {
   const [images, setImages] = useState([]);

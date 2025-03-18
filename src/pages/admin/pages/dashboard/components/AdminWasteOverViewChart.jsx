@@ -1,12 +1,12 @@
 /* eslint-disable react/prop-types */
 import {
-  LineChart,
+  CartesianGrid,
   Line,
+  LineChart,
+  ResponsiveContainer,
+  Tooltip,
   XAxis,
   YAxis,
-  Tooltip,
-  CartesianGrid,
-  ResponsiveContainer,
 } from "recharts";
 
 const data = [

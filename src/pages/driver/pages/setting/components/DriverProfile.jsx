@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
-import Input from '../../../../../components/shared/small/Input';
-import { SmallButton } from '../../../../../components/shared/small/Button';
-// import Input from '../../../../components/shared/small/Input';
 import Profiles from "../../../../../assets/images/settings/Profiles.png";
-// import { SmallButton } from '../../../../components/shared/small/Button';
+import { SmallButton } from '../../../../../components/shared/small/Button';
+import Input from '../../../../../components/shared/small/Input';
 
 const inputFields = [
     { label: "Full Name", type: "text", name: "fullName", placeholder: "Full Name" },

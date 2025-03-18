@@ -1,10 +1,10 @@
 import { useParams } from "react-router-dom";
-import { binCardData } from "./utils/bin";
 import CardOnDetail from "./components/CardOnDetail";
-import MapView from "./components/MapView";
-import WasteVolume from "./components/WasteVolume";
-import RecycleRate from "./components/RecycleRate";
 import FillLevelTrend from "./components/FillLevelTrend";
+import MapView from "./components/MapView";
+import RecycleRate from "./components/RecycleRate";
+import WasteVolume from "./components/WasteVolume";
+import { binCardData } from "./utils/bin";
 
 const BinDetail = () => {
   const { id } = useParams();

@@ -1,5 +1,5 @@
 import { lazy, Suspense } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import ViewMap from "./pages/driver/pages/dashboard/ViewMap.jsx";
 
 // Lazy load all components/pages

@@ -1,12 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import DataTable from 'react-data-table-component';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-import DataTable from 'react-data-table-component';
-// import { routeData, routeDataColumns } from './utils/routeData';
-// import routeTableStyle from './utils/routeTableStyle'
+import { FaCalendarAlt } from "react-icons/fa";
 import { subscriptionData, subscriptionDataColumns } from '../utils/SubscriptionsData';
 import subscriptionTableStyle from '../utils/subscriptionTableStyle';
-import { FaCalendarAlt } from "react-icons/fa";
 
 function SubscriptionsManagement() {
 

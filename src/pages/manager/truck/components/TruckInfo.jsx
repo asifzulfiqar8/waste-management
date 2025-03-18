@@ -1,5 +1,4 @@
 import React from 'react';
-import HeavyMachinery from "../../../../assets/images/truck/HeavyMachinery.png";
 import { IoLocation } from "react-icons/io5";
 
 const TruckInfo = ({ truckData }) => {

@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import { IoSearch } from "react-icons/io5";
-import { CiFilter } from "react-icons/ci";
+import DataTable from 'react-data-table-component';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-import Button from '../../../components/shared/small/Button';
-import DataTable from 'react-data-table-component';
-import { binDataColumns, binData } from './utils/binReport';
-import { BinReportTableStyle } from './utils/BinReportTableStyle';
+import { CiFilter } from "react-icons/ci";
 import { FaCalendarAlt } from "react-icons/fa";
+import { IoSearch } from "react-icons/io5";
+import Button from '../../../components/shared/small/Button';
+import { binData, binDataColumns } from './utils/binReport';
+import { BinReportTableStyle } from './utils/BinReportTableStyle';
 
 const BinReport = () => {
   const [dateRange, setDateRange] = useState([null, null]);

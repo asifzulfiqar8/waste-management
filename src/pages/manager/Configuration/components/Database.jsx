@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Input from '../../../../components/shared/small/Input';
 import Button from '../../../../components/shared/small/Button';
+import Input from '../../../../components/shared/small/Input';
 import Modal from '../../../../components/shared/small/Modal';
 
 const inputFields = [

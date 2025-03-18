@@ -1,8 +1,7 @@
 
 import React from 'react';
+import { Basic, Premium, Standard, UserBin, UserSensor, UserTruck } from '../../../../../assets/svgs/icon';
 import { SmallButton } from '../../../../../components/shared/small/Button';
-import { UserBin, UserSensor, UserTruck, Premium, Standard, Basic } from '../../../../../assets/svgs/icon';
-import Modal from '../../../../../components/shared/small/Modal';
 
 const Divider = () => (
   <div className="w-[0.6px] h-[80%] bg-[#00000033]" />

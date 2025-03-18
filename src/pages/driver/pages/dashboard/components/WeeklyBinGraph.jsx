@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { ComposedChart, Bar, Line, ResponsiveContainer, XAxis, YAxis, Tooltip } from 'recharts';
+import { Bar, ComposedChart, Line, ResponsiveContainer, Tooltip, XAxis } from 'recharts';
 
 function WeeklyBinGraph() {
     const [view, setView] = useState("weekly");

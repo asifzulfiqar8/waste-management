@@ -1,8 +1,6 @@
-import RedBin from '../../../../../assets/images/driver/alert/RedBin.png'
-import GrayBin from '../../../../../assets/images/driver/alert/GrayBin.png'
-import YallowBin from '../../../../../assets/images/driver/alert/YallowBin.png'
-import { MdOutlineShowChart } from "react-icons/md";
-import { IoIosAlert } from "react-icons/io";
+import GrayBin from '../../../../../assets/images/driver/alert/GrayBin.png';
+import RedBin from '../../../../../assets/images/driver/alert/RedBin.png';
+import YallowBin from '../../../../../assets/images/driver/alert/YallowBin.png';
 const alertsData = [
   {
     image: RedBin,

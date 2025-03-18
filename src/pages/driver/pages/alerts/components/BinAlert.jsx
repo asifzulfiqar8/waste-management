@@ -1,6 +1,6 @@
 import React from 'react';
-import { MdOutlineShowChart } from 'react-icons/md';
 import { IoIosAlert } from 'react-icons/io';
+import { MdOutlineShowChart } from 'react-icons/md';
 
 const DriverAlert = ({ image, binName, binPercentage, time1, time2, status }) => {
   const isFull = status.toLowerCase().includes("full");

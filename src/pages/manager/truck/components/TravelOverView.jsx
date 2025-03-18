@@ -2,15 +2,15 @@
 
 import React, { useState } from 'react';
 import {
-    LineChart,
-    Line,
-    XAxis,
-    YAxis,
     CartesianGrid,
+    Line,
+    LineChart,
+    ResponsiveContainer,
     Tooltip,
-    ResponsiveContainer
+    XAxis,
+    YAxis
 } from 'recharts';
-import Dropdown from '../../../../components/shared/small/Dropdown'
+import Dropdown from '../../../../components/shared/small/Dropdown';
 // Example data for "Route"
 const routeData = [
     { day: 'Mon', km: 80, comparison: 60 },

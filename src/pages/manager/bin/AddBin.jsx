@@ -1,7 +1,7 @@
 import { useState } from "react";
+import Confirmation from "./components/Confirmation";
 import GeneralInfo from "./components/GeneralInfo";
 import MapInfo from "./components/MapInfo";
-import Confirmation from "./components/Confirmation";
 
 const AddBin = () => {
   const [currentStep, setCurrentStep] = useState(1);

@@ -1,11 +1,11 @@
 import React from 'react';
 import {
-  LineChart,
   Line,
+  LineChart,
+  ResponsiveContainer,
+  Tooltip,
   XAxis,
   YAxis,
-  Tooltip,
-  ResponsiveContainer,
 } from 'recharts';
 
 // Sample data reflecting your screenshot (7 AM → 1 PM, picks 5 → 40)

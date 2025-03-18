@@ -2,10 +2,10 @@
 import { useState } from "react";
 import { LuChevronRight } from "react-icons/lu";
 import { RiErrorWarningFill } from "react-icons/ri";
-import trackingFailure from "../../../../../assets/images/dashboard/tracking-failure.png";
 import driverOverload from "../../../../../assets/images/dashboard/driver-overload.png";
-import truckOffline from "../../../../../assets/images/dashboard/truck-offline.png";
 import SensorMalfunction from "../../../../../assets/images/dashboard/sensor-malfunction.png";
+import trackingFailure from "../../../../../assets/images/dashboard/tracking-failure.png";
+import truckOffline from "../../../../../assets/images/dashboard/truck-offline.png";
 
 const Alerts = () => {
   return (

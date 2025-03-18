@@ -1,8 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import Plans from './Components/Plans';
 import Profile from './Components/Profile';
 import Subscriptions from './Components/Subscriptions';
-import Plans from './Components/Plans';
-// import Profile from "../../../assets/images/settings/Profile.png"
 const Settings = () => {
 
   const [activeTab, setActiveTab] = useState('profile');

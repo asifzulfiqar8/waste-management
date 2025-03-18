@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { AddIcon } from "../../../assets/svgs/icon";
 import AlertTable from './components/AlertTable';
 

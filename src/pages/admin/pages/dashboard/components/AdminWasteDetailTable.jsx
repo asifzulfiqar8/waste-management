@@ -1,6 +1,3 @@
-// import GlobalTable from "../../../../components/shared/large/GlobalTable";
-// import { wasteData, wasteDataColumns } from "../utils/WasteDetail";
-
 import DataTable from "react-data-table-component";
 import { DriverDetailsTableStyle } from "../utils/DriverDetailsTableStyle";
 import { DriverDataColumns, DriverWasteData } from "../utils/WasteDetail";

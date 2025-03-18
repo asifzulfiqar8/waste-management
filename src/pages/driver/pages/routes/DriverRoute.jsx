@@ -2,9 +2,9 @@ import { useState } from "react";
 import DataTable from "react-data-table-component";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import { FaCalendarAlt } from "react-icons/fa";
 import { routeData, routeDataColumns } from "./utils/RouteData";
 import routeTableStyle from "./utils/routeTableStyle";
-import { FaCalendarAlt } from "react-icons/fa";
 
 function DriverRoute() {
   const [dateRange, setDateRange] = useState([null, null]);

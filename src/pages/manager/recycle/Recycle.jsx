@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from './components/Header'
-import RecycleTable from './components/RecycleTable'
 import RecycleOverViewTable from './components/RecycleOverViewTable'
+import RecycleTable from './components/RecycleTable'
 
 function Recycle() {
   return (

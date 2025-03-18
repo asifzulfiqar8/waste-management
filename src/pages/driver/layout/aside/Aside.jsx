@@ -1,10 +1,8 @@
 import React, { useState } from "react";
-// import logo from "../../assets/images/logo.png";
-import logo from '../../../../assets/images/logo.png'
-// import { ArrowIcon } from "../../assets/svgs/icon";
 import { Link, useLocation } from "react-router-dom";
-import { pages } from "./pages";
+import logo from '../../../../assets/images/logo.png';
 import { ArrowIcon } from "../../../../assets/svgs/icon";
+import { pages } from "./pages";
 
 const Aside = () => {
   const [isAsideOpen, setIsAsideOpen] = useState(false);

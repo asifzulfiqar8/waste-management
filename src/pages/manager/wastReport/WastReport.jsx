@@ -1,20 +1,13 @@
 import React, { useState } from 'react';
-import { IoSearch } from "react-icons/io5";
-import { CiFilter } from "react-icons/ci";
+import DataTable from 'react-data-table-component';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-// import Button from '../../../components/shared/small/Button';
-import DataTable from 'react-data-table-component';
-// import { truckData, truckDataColumns } from './utils/truckReport';
-// import { TruckReportTableStyle } from './utils/TruckReportTableStyle';
+import { CiFilter } from "react-icons/ci";
+import { FaCalendarAlt } from "react-icons/fa";
+import { IoSearch } from "react-icons/io5";
 import Button from '../../../components/shared/small/Button';
-// import { recycleData, recycleDataColumns } from './utils/recycleReport';
-// import { recycleReportTableStyle } from './utils/recycleReportTableStyle';
 import { wastData, wastDataColumns } from './utils/wastReport';
 import { wastReportTableStyle } from './utils/wastReportTableStyle';
-// import { binDataColumns, binData } from './utils/binReport';
-// import { BinReportTableStyle } from './utils/BinReportTableStyle';
-import { FaCalendarAlt } from "react-icons/fa";
 
 const WastReport = () => {
   const [dateRange, setDateRange] = useState([null, null]);

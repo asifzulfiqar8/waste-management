@@ -1,5 +1,4 @@
-import React from 'react'
-import Button from '../../../../components/shared/small/Button'
+import React from 'react';
 import { routesData } from '../utils/truck';
 
 function TruckRoutes() {

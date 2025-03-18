@@ -1,5 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
-import DataTable from "react-data-table-component";
+import React, { useEffect, useRef, useState } from "react";
 import { FaEllipsisV } from "react-icons/fa";
 
 // Sample data

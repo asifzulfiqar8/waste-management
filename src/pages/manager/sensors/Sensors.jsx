@@ -2,9 +2,9 @@ import { useState } from "react";
 import { CiSearch } from "react-icons/ci";
 import { AddIcon } from "../../../assets/svgs/icon";
 import Modal from "../../../components/shared/small/Modal";
+import AddSensor from "./AddSensor";
 import SensorTable from "./components/SensorTable";
 import TotalSensor from "./components/TotalSensor";
-import AddSensor from "./AddSensor";
 
 
 const Sensors = () => {

@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useCallback, useState } from 'react';
 import Input from '../../../../../components/shared/small/Input';
 
 function CompanyDetails({ currentStep, handleNext, handlePrevious, handleCancel }) {
@@ -48,7 +48,7 @@ function CompanyDetails({ currentStep, handleNext, handlePrevious, handleCancel 
       <section className="flex pt-4 w-full justify-center mt-4 space-x-2 p-2 rounded-lg">
         {currentStep > 1 && (
           <button
-            className="px-4 py-2 border border-primary text-primary rounded-lg"
+            className="px-4 py-1 border border-primary text-primary rounded-lg"
             onClick={handlePrevious}
           >
             Previous
@@ -56,14 +56,14 @@ function CompanyDetails({ currentStep, handleNext, handlePrevious, handleCancel 
         )}
         {currentStep < 3 ? (
           <button
-            className="px-4 py-2 bg-primary text-white rounded-lg"
+            className="px-4 py-1 bg-primary text-white rounded-lg"
             onClick={handleNext}
           >
             Next
           </button>
         ) : (
           <button
-            className="px-4 py-2 bg-primary text-white rounded-lg"
+            className="px-4 py-1 bg-primary text-white rounded-lg"
             onClick={handleCancel}
           >
             Confirm
